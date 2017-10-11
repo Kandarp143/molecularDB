@@ -1,0 +1,1 @@
+<p>&copy;. All Rights Reserved. Designed By University of Kaiserslautern &#38; University of Paderborn</p>

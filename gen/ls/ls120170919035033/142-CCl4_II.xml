@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="19092017">
+ <moleculetype id="1" name="142-CCl4_II">
+  <site type="LJ126" id="1">
+   <coords><x>0.0</x><y>0.0</y><z>0.0</z>   </coords>
+   <sigma>2.81</sigma>
+   <epsilon>12.37</epsilon>
+   <mass>12.011</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>1.18</x><y>1.18</y><z>1.18</z>   </coords>
+   <sigma>3.25</sigma>
+   <epsilon>212.6</epsilon>
+   <mass>35.453</mass>
+  </site>
+  <site type="LJ126" id="3">
+   <coords><x>-1.18</x><y>-1.18</y><z>1.18</z>   </coords>
+   <sigma>3.25</sigma>
+   <epsilon>212.6</epsilon>
+   <mass>35.453</mass>
+  </site>
+  <site type="LJ126" id="4">
+   <coords><x>-1.18</x><y>1.18</y><z>-1.18</z>   </coords>
+   <sigma>3.25</sigma>
+   <epsilon>212.6</epsilon>
+   <mass>35.453</mass>
+  </site>
+  <site type="LJ126" id="5">
+   <coords><x>1.18</x><y>-1.18</y><z>-1.18</z>   </coords>
+   <sigma>3.25</sigma>
+   <epsilon>212.6</epsilon>
+   <mass>35.453</mass>
+  </site>
+  <site type="Charge" id="6">
+   <coords><x>0.0</x><y>0.0</y><z>0.0</z>   </coords>
+   <charge>-0.362</charge>
+   <mass>0.0</mass>
+  </site>
+  <site type="Charge" id="7">
+   <coords><x>1.18</x><y>1.18</y><z>1.18</z>   </coords>
+   <charge>+0.0905</charge>
+   <mass>0.0</mass>
+  </site>
+  <site type="Charge" id="8">
+   <coords><x>-1.18</x><y>-1.18</y><z>1.18</z>   </coords>
+   <charge>+0.0905</charge>
+   <mass>0.0</mass>
+  </site>
+  <site type="Charge" id="9">
+   <coords><x>-1.18</x><y>1.18</y><z>-1.18</z>   </coords>
+   <charge>+0.0905</charge>
+   <mass>0.0</mass>
+  </site>
+  <site type="Charge" id="10">
+   <coords><x>1.18</x><y>-1.18</y><z>-1.18</z>   </coords>
+   <charge>+0.0905</charge>
+   <mass>0.0</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>

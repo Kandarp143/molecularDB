@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="19092017">
+ <moleculetype id="1" name="41-CH2Br2_Q">
+  <site type="LJ126" id="1">
+   <coords><x>0.0</x><y>0.0</y><z>-1.5473</z>   </coords>
+   <sigma>3.8683</sigma>
+   <epsilon>274.97</epsilon>
+   <mass>86.918</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>0.0</x><y>0.0</y><z>1.5473</z>   </coords>
+   <sigma>3.8683</sigma>
+   <epsilon>274.97</epsilon>
+   <mass>86.918</mass>
+  </site>
+  <site type="Quadrupole" id="3">
+   <coords><x>0.0</x><y>0.0</y><z>0.0</z>   </coords>
+   <quadrupolemoment><theta>0.0</theta><phi>0.0</phi><abs>9.2682</abs>   </quadrupolemoment>
+   <mass>0.0</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>

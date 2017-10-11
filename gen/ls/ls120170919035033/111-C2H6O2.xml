@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="19092017">
+ <moleculetype id="1" name="111-C2H6O2">
+  <site type="LJ126" id="1">
+   <coords><x>	1.6941</x><y>0.24</y><z>0.00</z>   </coords>
+   <sigma>3.18</sigma>
+   <epsilon>89.31</epsilon>
+   <mass>17.007</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>	-1.6941</x><y>-0.24</y><z>0.00</z>   </coords>
+   <sigma>3.18</sigma>
+   <epsilon>89.31</epsilon>
+   <mass>17.007</mass>
+  </site>
+  <site type="LJ126" id="3">
+   <coords><x>-0.4831</x><y>0.8857</y><z>0.00</z>   </coords>
+   <sigma>3.50</sigma>
+   <epsilon>94.00</epsilon>
+   <mass>14.027</mass>
+  </site>
+  <site type="LJ126" id="4">
+   <coords><x>0.4831</x><y>-0.8857</y><z>0.00</z>   </coords>
+   <sigma>3.50</sigma>
+   <epsilon>94.00</epsilon>
+   <mass>14.027</mass>
+  </site>
+  <site type="Charge" id="5">
+   <coords><x>	-0.4831</x><y>0.8875</y><z>0.0</z>   </coords>
+   <charge>+0.278</charge>
+   <mass>0.0</mass>
+  </site>
+  <site type="Charge" id="6">
+   <coords><x>1.6941</x><y>0.2400</y><z>0.0</z>   </coords>
+   <charge>-0.810</charge>
+   <mass>0.0</mass>
+  </site>
+  <site type="Charge" id="7">
+   <coords><x>-2.4793</x><y>0.2072</y><z>0.0</z>   </coords>
+   <charge>+0.532</charge>
+   <mass>0.0</mass>
+  </site>
+  <site type="Charge" id="8">
+   <coords><x>0.4831</x><y>-0.8857</y><z>0.0</z>   </coords>
+   <charge>+0.278</charge>
+   <mass>0.0</mass>
+  </site>
+  <site type="Charge" id="9">
+   <coords><x>-1.6941</x><y>-0.2400</y><z>-0.0</z>   </coords>
+   <charge>-0.810</charge>
+   <mass>0.0</mass>
+  </site>
+  <site type="Charge" id="10">
+   <coords><x>2.4793</x><y>-0.2072</y><z>0.0</z>   </coords>
+   <charge>+0.532</charge>
+   <mass>0.0</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="19092017">
+ <moleculetype id="1" name="123-C2N2">
+  <site type="LJ126" id="1">
+   <coords><x>0.0</x><y>0.0</y><z>1.8676</z>   </coords>
+   <sigma>3.3186</sigma>
+   <epsilon>35.70</epsilon>
+   <mass>14.007</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>0.0</x><y>0.0</y><z>0.6877</z>   </coords>
+   <sigma>3.5673</sigma>
+   <epsilon>28.56</epsilon>
+   <mass>12.011</mass>
+  </site>
+  <site type="LJ126" id="3">
+   <coords><x>0.0</x><y>0.0</y><z>-0.6877</z>   </coords>
+   <sigma>3.5673</sigma>
+   <epsilon>28.56</epsilon>
+   <mass>12.011</mass>
+  </site>
+  <site type="LJ126" id="4">
+   <coords><x>0.0</x><y>0.0</y><z>-1.8676</z>   </coords>
+   <sigma>3.3186</sigma>
+   <epsilon>35.70</epsilon>
+   <mass>14.007</mass>
+  </site>
+  <site type="Quadrupole" id="5">
+   <coords><x>0.0</x><y>0.0</y><z>0.0</z>   </coords>
+   <quadrupolemoment><theta>0.0</theta><phi>0.0</phi><abs>-9.91</abs>   </quadrupolemoment>
+   <mass>0.0</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>

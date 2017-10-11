@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="19092017">
+ <moleculetype id="1" name="92-C4H4S_I">
+  <site type="LJ126" id="1">
+   <coords><x>0.000000</x><y>0.000000</y><z>0.7359</z>   </coords>
+   <sigma>4.292</sigma>
+   <epsilon>95.65</epsilon>
+   <mass>32.064</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>1.2513</x><y>0.000000</y><z>0.2067</z>   </coords>
+   <sigma>3.59</sigma>
+   <epsilon>48.49</epsilon>
+   <mass>13.019</mass>
+  </site>
+  <site type="LJ126" id="3">
+   <coords><x>-1.2513</x><y>0.000000</y><z>0.2067</z>   </coords>
+   <sigma>3.59</sigma>
+   <epsilon>48.49</epsilon>
+   <mass>13.019</mass>
+  </site>
+  <site type="LJ126" id="4">
+   <coords><x>0.7734</x><y>0.000000</y><z>-1.2643</z>   </coords>
+   <sigma>3.59</sigma>
+   <epsilon>48.49</epsilon>
+   <mass>13.019</mass>
+  </site>
+  <site type="LJ126" id="5">
+   <coords><x>-0.7734</x><y>0.000000</y><z>-1.2643</z>   </coords>
+   <sigma>3.59</sigma>
+   <epsilon>48.49</epsilon>
+   <mass>13.019</mass>
+  </site>
+  <site type="Dipole" id="6">
+   <coords><x>0.0</x><y>0.0</y><z>0.0</z>   </coords>
+   <theta>180.00</theta>
+   <phi>0.0</phi>
+   <dipole>1.8120</dipole>
+   <mass>0.0</mass>
+  </site>
+  <site type="Quadrupole" id="7">
+   <coords><x>0.0</x><y>0.0</y><z>0.0</z>   </coords>
+   <quadrupolemoment><theta>90.0</theta><phi>0.0</phi><abs>6.5389</abs>   </quadrupolemoment>
+   <mass>0.0</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>

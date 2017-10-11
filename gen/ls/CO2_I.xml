@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="05102017">
+ <moleculetype id="1" name="CO2_I">
+  <site type="LJ126" id="1">
+   <coords><x>0.0</x><y>0.0</y><z>0.0</z>   </coords>
+   <sigma>2.8137</sigma>
+   <epsilon>12.3724</epsilon>
+   <mass>12.012</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>0.0</x><y>0.0</y><z>-1.2869</z>   </coords>
+   <sigma>2.9755</sigma>
+   <epsilon>100.493</epsilon>
+   <mass>15.999</mass>
+  </site>
+  <site type="LJ126" id="3">
+   <coords><x>0.0</x><y>0.0</y><z>1.2869</z>   </coords>
+   <sigma>2.9755</sigma>
+   <epsilon>100.493</epsilon>
+   <mass>15.999</mass>
+  </site>
+  <site type="Quadrupole" id="4">
+   <coords><x>0.0</x><y>0.0</y><z>0.0</z>   </coords>
+   <quadrupolemoment><theta>0.0</theta><phi>0.0</phi><abs>4.0739</abs>   </quadrupolemoment>
+   <mass>0.0</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>

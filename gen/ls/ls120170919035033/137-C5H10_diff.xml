@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="19092017">
+ <moleculetype id="1" name="137-C5H10_diff">
+  <site type="LJ126" id="1">
+   <coords><x>0</x><y>0</y><z>0</z>   </coords>
+   <sigma>3.235</sigma>
+   <epsilon>122.75</epsilon>
+   <mass>14.027</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>-2.21923691404426</x><y>0</y><z>0</z>   </coords>
+   <sigma>3.235</sigma>
+   <epsilon>122.75</epsilon>
+   <mass>14.027</mass>
+  </site>
+  <site type="LJ126" id="3">
+   <coords><x>-2.69780930340047</x><y>2.16701984515761</y><z>0</z>   </coords>
+   <sigma>3.235</sigma>
+   <epsilon>122.75</epsilon>
+   <mass>14.027</mass>
+  </site>
+  <site type="LJ126" id="4">
+   <coords><x>-1.22245642053454</x><y>3.04131880113976</y><z>-1.42525894997669</z>   </coords>
+   <sigma>3.235</sigma>
+   <epsilon>122.75</epsilon>
+   <mass>14.027</mass>
+  </site>
+  <site type="LJ126" id="5">
+   <coords><x>0.525437767216078</x><y>1.63737091518038</y><z>-1.425219916263</z>   </coords>
+   <sigma>3.235</sigma>
+   <epsilon>122.75</epsilon>
+   <mass>14.027</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>

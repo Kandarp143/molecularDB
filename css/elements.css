@@ -1,0 +1,158 @@
+/*button styling*/
+
+.btn {
+    border: none;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 50%
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Blue */
+.btn-primary {
+    background-color: #008CBA;
+    color: white;
+}
+
+/* Red */
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+}
+
+/* green */
+.btn-success {
+    background-color: #4CAF50;;
+    color: white;
+}
+
+/*hyperlink styling*/
+
+/*default class*/
+a:link, a:visited {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+/*green*/
+a.a-success:link, a.a-success:visited {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a.a-success:hover, a.a-success:active {
+    text-decoration: underline;
+}
+
+/*red*/
+
+a.a-danger:link, a.a-danger:visited {
+    color: #FF6347;
+    text-decoration: none;
+}
+
+a.a-danger:hover, a.a-danger:active {
+    text-decoration: underline;
+}
+
+/*button style link*/
+a.a-button:link, a.a-button:visited {
+    border: solid 1px #3b5998;
+    padding: 4px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.a-button:hover, a.a-button:active {
+    border: solid 2px #3b5998;
+}
+
+/*table styling*/
+
+/* table index */
+.datagrid table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+
+.datagrid {
+    font: normal 13px/150% sans-serif, Verdana, Geneva;
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #999999;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.datagrid table td, .datagrid table th {
+    padding: 3px 10px;
+}
+
+.datagrid table tbody td {
+    color: #00496B;
+    border-left: 1px solid #E1EEF4;
+    font-size: 12px;
+    border-bottom: 1px solid #E1EEF4;
+    font-weight: normal;
+}
+
+.datagrid table tbody td:first-child {
+    border-left: none;
+}
+
+.datagrid table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/*on more table */
+.beta th {
+    font-size: 14px;
+    border: solid 1px white;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*mol detail paginate button*/
+.paginate_moldetail {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0.3em 0.7em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    color: #333 !important;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #333 !important;
+    border: 1px solid #979797;
+    background-color: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #dcdcdc));
+    background: -webkit-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -o-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%);
+}
+
+/*form styleing input */
+
+.form input[type=text], input[type=password] {
+    width: 100%;
+}

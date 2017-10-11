@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="19092017">
+ <moleculetype id="1" name="94-CH2O">
+  <site type="LJ126" id="1">
+   <coords><x>0.0</x><y>0.000000</y><z>0.6721</z>   </coords>
+   <sigma>3.010</sigma>
+   <epsilon>112.61</epsilon>
+   <mass>15.999</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>0.00</x><y>0.000000</y><z>-0.7682</z>   </coords>
+   <sigma>3.422</sigma>
+   <epsilon>77.42</epsilon>
+   <mass>14.027</mass>
+  </site>
+  <site type="Dipole" id="3">
+   <coords><x>0.0</x><y>0.0</y><z>0.0480</z>   </coords>
+   <theta>0.0</theta>
+   <phi>0.0</phi>
+   <dipole>-2.6668</dipole>
+   <mass>0.0</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>

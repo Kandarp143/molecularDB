@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="19092017">
+ <moleculetype id="1" name="57-R115_CF3-CF2Cl">
+  <site type="LJ126" id="1">
+   <coords><x>0.0</x><y>0.0</y><z>-1.67565</z>   </coords>
+   <sigma>4.1891</sigma>
+   <epsilon>155.77</epsilon>
+   <mass>77.233</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>0.0</x><y>0.0</y><z>1.67565</z>   </coords>
+   <sigma>4.1891</sigma>
+   <epsilon>155.77</epsilon>
+   <mass>77.233</mass>
+  </site>
+  <site type="Quadrupole" id="3">
+   <coords><x>0.0</x><y>0.0</y><z>0.0</z>   </coords>
+   <quadrupolemoment><theta>0.0</theta><phi>0.0</phi><abs>9.2246</abs>   </quadrupolemoment>
+   <mass>0.0</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>

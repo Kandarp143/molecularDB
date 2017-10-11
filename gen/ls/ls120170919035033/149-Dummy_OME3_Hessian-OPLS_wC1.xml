@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="19092017">
+ <moleculetype id="1" name="149-Dummy_OME3_Hessian-OPLS_wC1">
+  <SiteID>1</SiteID>
+  <site type="LJ126" id="1">
+   <coords><x>-0.555374117</x><y>0.513488877</y><z>-3.74904219</z>   </coords>
+   <sigma>3.80</sigma>
+   <epsilon>85.55</epsilon>
+   <mass>15.035</mass>
+   <SiteID>2</SiteID>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>0.198893369</x><y>0.278723177</y><z>-2.592031535</z>   </coords>
+   <sigma>3.00</sigma>
+   <epsilon>85.55</epsilon>
+   <mass>15.999</mass>
+   <SiteID>3</SiteID>
+  </site>
+  <site type="LJ126" id="3">
+   <coords><x>-0.044542106</x><y>-0.886330984</y><z>-1.944479006</z>   </coords>
+   <sigma>3.80</sigma>
+   <epsilon>59.38</epsilon>
+   <mass>14.027</mass>
+   <SiteID>4</SiteID>
+  </site>
+  <site type="LJ126" id="4">
+   <coords><x>-0.854221214</x><y>-0.713218069</y><z>-0.871915432</z>   </coords>
+   <sigma>3.00</sigma>
+   <epsilon>85.55</epsilon>
+   <mass>15.999</mass>
+   <SiteID>5</SiteID>
+  </site>
+  <site type="LJ126" id="5">
+   <coords><x>-0.303297249</x><y>0.202733379</y><z>-0.039173936</z>   </coords>
+   <sigma>3.80</sigma>
+   <epsilon>59.38</epsilon>
+   <mass>14.027</mass>
+   <SiteID>6</SiteID>
+  </site>
+  <site type="LJ126" id="6">
+   <coords><x>-0.802032755</x><y>0.271938112</y><z>1.218764888</z>   </coords>
+   <sigma>3.00</sigma>
+   <epsilon>85.55</epsilon>
+   <mass>15.999</mass>
+   <SiteID>7</SiteID>
+  </site>
+  <site type="LJ126" id="7">
+   <coords><x>-0.036676782</x><y>-0.447843361</y><z>2.074380545</z>   </coords>
+   <sigma>3.80</sigma>
+   <epsilon>59.38</epsilon>
+   <mass>14.027</mass>
+   <SiteID>8</SiteID>
+  </site>
+  <site type="LJ126" id="8">
+   <coords><x>1.212630248</x><y>-0.001896186</y><z>2.350601501</z>   </coords>
+   <sigma>3.00</sigma>
+   <epsilon>85.55</epsilon>
+   <mass>15.999</mass>
+   <SiteID>9</SiteID>
+  </site>
+  <site type="LJ126" id="9">
+   <coords><x>1.175301554</x><y>0.717939187</y><z>3.551915711</z>   </coords>
+   <sigma>3.80</sigma>
+   <epsilon>85.55</epsilon>
+   <mass>15.035</mass>
+   <SiteID>10</SiteID>
+  </site>
+  <site type="Charge" id="10">
+   <coords><x>-0.555374117</x><y>0.513488877</y><z>-3.74904219</z>   </coords>
+   <charge>0.25</charge>
+   <mass>0.00</mass>
+   <SiteID>11</SiteID>
+  </site>
+  <site type="Charge" id="11">
+   <coords><x>0.198893369</x><y>0.278723177</y><z>-2.592031535</z>   </coords>
+   <charge>-0.50</charge>
+   <mass>0.00</mass>
+   <SiteID>12</SiteID>
+  </site>
+  <site type="Charge" id="12">
+   <coords><x>-0.044542106</x><y>-0.886330984</y><z>-1.944479006</z>   </coords>
+   <charge>0.50</charge>
+   <mass>0.00</mass>
+   <SiteID>13</SiteID>
+  </site>
+  <site type="Charge" id="13">
+   <coords><x>-0.854221214</x><y>-0.713218069</y><z>-0.871915432</z>   </coords>
+   <charge>-0.50</charge>
+   <mass>0.00</mass>
+   <SiteID>14</SiteID>
+  </site>
+  <site type="Charge" id="14">
+   <coords><x>-0.303297249</x><y>0.202733379</y><z>-0.039173936</z>   </coords>
+   <charge>0.50</charge>
+   <mass>0.00</mass>
+   <SiteID>15</SiteID>
+  </site>
+  <site type="Charge" id="15">
+   <coords><x>-0.802032755</x><y>0.271938112</y><z>1.218764888</z>   </coords>
+   <charge>-0.50</charge>
+   <mass>0.00</mass>
+   <SiteID>16</SiteID>
+  </site>
+  <site type="Charge" id="16">
+   <coords><x>-0.036676782</x><y>-0.447843361</y><z>2.074380545</z>   </coords>
+   <charge>0.50</charge>
+   <mass>0.00</mass>
+   <SiteID>17</SiteID>
+  </site>
+  <site type="Charge" id="17">
+   <coords><x>1.212630248</x><y>-0.001896186</y><z>2.350601501</z>   </coords>
+   <charge>-0.50</charge>
+   <mass>0.00</mass>
+   <SiteID>18</SiteID>
+  </site>
+  <site type="Charge" id="18">
+   <coords><x>1.175301554</x><y>0.717939187</y><z>3.551915711</z>   </coords>
+   <charge>0.25</charge>
+   <mass>0.00</mass>
+  </site>
+  <momentsofinertia rotaxes="xyz">
+   <Ixx>0</Ixx>
+   <Iyy>0</Iyy>
+   <Izz>0</Izz>
+  </momentsofinertia>
+ </moleculetype>
+</components>
