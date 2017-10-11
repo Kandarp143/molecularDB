@@ -13,29 +13,27 @@ if (sizeof($dihedral[0]) > 12) {
     $dihedral = $temp;
 }
 $contstr = $returnArray[3];
+$isBracket = false;
 ?>
 
-<h3 style="color: #2b2b2b;margin-top: 1%"><b>Intramolecular Potential Parameters</b></h3>
+<h3 style="color: #2b2b2b;"><b>Intramolecular Potential Parameters</b></h3>
 
 <!-- bond table-->
-<h3 style="color: #2b2b2b"><b>Bond-Detail</b></h3>
-
+<h3 style="color: #55595c;font-size: 17px"><b>Bond</b></h3>
 <table width="60%">
     <tr style="border-bottom: solid 1px grey;">
         <td><b>Site-ID's</b></td>
-        <td><b>Site-name's</b></td>
+        <td><b>Site-namess</b></td>
         <td><b>Distance / <span>&#8491;</span></b></td>
-        <td><b>k<sub>bond</sub> / k<sub>B</sub> / k <span>&#8491;</span><sup>-2</sup> </b></td>
+        <td><b>k<sub>bond</sub>/k<sub>B</sub> / K<span>&#8491;</span><sup>-2</sup> </b></td>
     </tr>
 
     <?php
-    $isBracket = true;
-    foreach ($bond
-
-             as $row) { ?>
+    //    $isBracket = true;
+    foreach ($bond as $row) { ?>
         <tr>
             <td><?php echo $row[0] ?></td>
-            <td><?php echo $row[1] ?></td>
+            <td><?php echo toSubstanceTitle($row[1]) ?></td>
             <td><?php echo $row[2] ?></td>
             <td><?php echo $row[3] ?></td>
             <?php if ($isBracket) {
@@ -56,21 +54,20 @@ $contstr = $returnArray[3];
 
 <!-- Angle table-->
 <br/><br/>
-<h3 style=" color: #2b2b2b
-        "><b>Angle-Detail</b></h3>
+<h3 style="color: #55595c;font-size: 17px"><b>Angle</b></h3>
 <table width="50%">
     <tr style="border-bottom: solid 1px grey;">
         <td><b>Site-ID's</b></td>
-        <td><b>Site-name's</b></td>
+        <td><b>Site-names</b></td>
         <td><b><span>&alpha;</span> / <span>&#xb0;</span></b></td>
-        <td><b>k<sub>angle</sub> / k<sub>B</sub> / k rad<sup>-2</sup> </b></td>
+        <td><b>k<sub>angle</sub> /k<sub>B</sub> / K rad<sup>-2</sup> </b></td>
     </tr>
     <?php
-    $isBracket = true;
+    //    $isBracket = true;
     foreach ($angle as $row) { ?>
         <tr>
             <td><?php echo $row[0] ?></td>
-            <td><?php echo $row[1] ?></td>
+            <td><?php echo toSubstanceTitle($row[1]) ?></td>
             <td><?php echo $row[2] ?></td>
             <td><?php echo $row[3] ?></td>
             <?php if ($isBracket) {
@@ -91,25 +88,14 @@ $contstr = $returnArray[3];
 
 <!-- Dihedral table-->
 <br/><br/>
-<h3 style="color: #2b2b2b"><b>Dihedral-Detail</b></h3>
+<h3 style="color: #55595c;font-size: 17px"><b>Dihedral</b></h3>
 <table width="100%">
     <?php
-    $isBracket = true;
+    //    $isBracket = true;
     $header = true;
     foreach ($dihedral as $row) {
         if ($header) {
             ?>
-            <tr>
-                <?php foreach ($row as $key => $value) {
-                    if ($key == 'ScaleLJ14') { ?>
-                        <td colspan="2" style="text-align: center;border-bottom: solid 1px grey;">
-                            <b><?php echo '1 - 4 Scaling' ?></b></td>
-                    <?php } elseif ($key == 'ScaleEl14') { ?>
-                    <?php } else { ?>
-                        <td></td>
-                    <?php } ?>
-                <?php } ?>
-            </tr>
             <tr style="border-bottom: solid 1px grey;">
                 <?php foreach ($row as $key => $value) { ?>
                     <td><b><?php echo toCustomDihedralHeader($key) ?></b></td>
@@ -118,8 +104,13 @@ $contstr = $returnArray[3];
             <?php $header = false;
         } ?>
         <tr>
-            <?php foreach ($row as $key => $value) { ?>
-                <td><?php echo $value ?></td>
+            <?php foreach ($row as $key => $value) {
+                if ($key == "Site-Name") { ?>
+                    <td><?php echo toSubstanceTitle($value) ?></td>
+                <?php } else { ?>
+                    <td><?php echo $value ?></td>
+                <?php } ?>
+
             <?php } ?>
             <?php if ($isBracket) {
                 $line = sizeof($dihedral);
@@ -136,28 +127,16 @@ $contstr = $returnArray[3];
         <?php $isBracket = false;
     } ?>
 </table>
-
 <!-- Dihedral2 if there table-->
 <?php if (!empty($dihedral2)) { ?>
     <br/>
-    <table>
+    <table align="right" style="min-width: 30%">
         <?php
-        $isBracket = true;
+        //        $isBracket = true;
         $header = true;
         foreach ($dihedral2 as $row) {
             if ($header) {
                 ?>
-                <tr>
-                    <?php foreach ($row as $key => $value) {
-                        if ($key == 'ScaleLJ14') { ?>
-                            <td colspan="2" style="text-align: center;border-bottom: solid 1px grey;">
-                                <b><?php echo '1 - 4 Scaling' ?></b></td>
-                        <?php } elseif ($key == 'ScaleEl14') { ?>
-                        <?php } else { ?>
-                            <td></td>
-                        <?php } ?>
-                    <?php } ?>
-                </tr>
                 <tr style="border-bottom: solid 1px grey;">
                     <?php foreach ($row as $key => $value) { ?>
                         <td><b><?php echo toCustomDihedralHeader($key) ?></b></td>
@@ -188,21 +167,20 @@ $contstr = $returnArray[3];
 
 <!-- Constraint table-->
 <br/><br/>
-<h3 style="color: #2b2b2b"><b>Constraint</b></h3>
-<table width="50%">
+<h3 style="color: #55595c;font-size: 17px;margin-top: 7%"><b>Constraint</b></h3>
+<table width="40%">
     <tr style="border-bottom: solid 1px grey;">
         <td><b>Unit-ID</b></td>
-        <td><b>Number of site's</b></td>
         <td><b>Site-ID's</b></td>
-        <td><b>Site-name's</b></td>
+        <td><b>Site-names</b></td>
     </tr>
-    <?php $isBracket = true;
+    <?php
+    //    $isBracket = true;
     foreach ($contstr as $row) { ?>
         <tr>
             <td><?php echo $row[0] ?></td>
-            <td><?php echo $row[1] ?></td>
             <td><?php echo $row[2] ?></td>
-            <td><?php echo $row[3] ?></td>
+            <td><?php echo toSubstanceTitle($row[3]) ?></td>
             <?php if ($isBracket) {
                 $line = sizeof($contstr);
                 ?>

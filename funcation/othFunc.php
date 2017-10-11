@@ -71,8 +71,12 @@ function isSubstanceIonic($substance)
 /*func to  format site type by custom role*/
 function toFormatSiteType($siteType)
 {
-    if ($siteType === 'LJ126')
-        $siteType = 'LJ 12- 6';
+    if ($siteType === 'LJ126') {
+        $siteType = 'Lennard-Jones 12-6';
+    } else {
+        $siteType = "<br/>" . $siteType;
+    }
+
     return $siteType;
 }
 
@@ -661,13 +665,17 @@ function toCustomDihedralHeader($header)
     if ($header == "Site-ID") {
         return "Site-ID's";
     } elseif ($header == "Site-Name") {
-        return "Site-name's";
+        return "Site-names";
+    } elseif ($header == "ScaleLJ14") {
+        return "LJ<sub>1-4</sub>";
+    } elseif ($header == "ScaleEl14") {
+        return "Elec.<sub>1-4</sub>";
     } elseif (strpos($header, 'ForConst') !== false) {
         $digit = str_replace('ForConst', '', $header);
-        return 'C<sub>' . $digit . '</sub> / k<sub>B</sub> / k ';
+        return 'c<sub>' . $digit . '</sub>/k<sub>B</sub> / K ';
     } elseif (strpos($header, 'gamma0') !== false) {
         $digit = str_replace('gamma0', '', $header);
-        return '&phi;<sub>' . $digit . '</sub> / <span>&#xb0;</span> ';
+        return '&Phi;<sub>' . $digit . '</sub> / <span>&#xb0;</span> ';
     }
     return $header;
 }

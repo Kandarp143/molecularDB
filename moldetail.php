@@ -82,7 +82,6 @@ if (!empty($data)) {
                 <!--                molecule detail part : Flexible-->
                 <?php if ($type == 'Flexible') {
                     if ($_SESSION['act'] == 'true') { ?>
-                        <h1 class="title" style="border: solid red 2px">Flexible Detail</h1>
                         <div class="entry" style="border: solid red 2px">
                             <p><?php include('include/detFelxi.php') ?></p>
                         </div>

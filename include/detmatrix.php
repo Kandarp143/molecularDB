@@ -71,16 +71,19 @@ $maker2 = $returnArray['maker2'];
 <h3 style="color: #2b2b2b;margin-top: 5%"><b>Intermolecular Potential Parameters</b></h3>
 
 
-<table width="80%">
+<table width="70%">
     <?php $isheader = false;
     foreach ($pmatrix as $z):?>
         <?php if (array_key_exists($z[1], $maker2)) {
             $isheader = true; ?>
             <tr>
-                <td></td>
+                <td colspan="3"><h3 style="color: #55595c;font-size: 17px;">
+                        <b><?php echo toFormatSiteType($z[0]); ?></b>
+                    </h3></td>
             </tr>
         <?php }
         if ($isheader) { ?>
+
             <tr style="border-bottom: solid 1px grey;">
                 <?php foreach ($z[2] as $paramName => $value) { ?>
                     <td><b><?php echo toCustomHeader($paramName) ?></b></td>
@@ -111,12 +114,7 @@ $maker2 = $returnArray['maker2'];
                     $fwidth2 = $hMul * $line * 0.30;
                 }
                 ?>
-                <td rowspan=" <?php echo $maker2[$z[1]] ?>">
-                    <img src="img/bracket_b.png"
-                         style=" height: <?php echo $fhight2 . 'px'; ?>;width: <?php echo $fwidth2 . 'px'; ?> ;">
-                </td>
-                <td rowspan=" <?php echo $maker2[$z[1]] ?>"><b><?php echo toFormatSiteType($z[0]) ?></b>
-                </td>
+
             <?php } ?>
         </tr>
         <?php
