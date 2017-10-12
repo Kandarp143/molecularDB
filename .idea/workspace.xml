@@ -108,12 +108,12 @@
         <option value="$PROJECT_DIR$/moldetail.php" />
         <option value="$PROJECT_DIR$/include/detmatrix.php" />
         <option value="$PROJECT_DIR$/include/detFelxi.php" />
-        <option value="$PROJECT_DIR$/funcation/othFunc.php" />
         <option value="$PROJECT_DIR$/include/nav.php" />
         <option value="$PROJECT_DIR$/mollist2.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/funcation/othFunc.php" />
         <option value="$PROJECT_DIR$/mollist.php" />
         <option value="$PROJECT_DIR$/js/list.js" />
-        <option value="$PROJECT_DIR$/.htaccess" />
       </list>
     </option>
   </component>
@@ -134,7 +134,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="250" />
     <option name="y" value="42" />
     <option name="width" value="1386" />
@@ -353,12 +353,12 @@
       <workItem from="1507809991631" duration="983000" />
       <workItem from="1507814311242" duration="1422000" />
       <workItem from="1507815888810" duration="16000" />
-      <workItem from="1507826306749" duration="137000" />
+      <workItem from="1507826306749" duration="5697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178758000" />
+    <option name="totallyTimeSpent" value="184318000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -370,10 +370,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34568834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34568834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -832,10 +832,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mollist2.php" />
+    <entry file="file://$PROJECT_DIR$/js/mollist.js" />
+    <entry file="file://$PROJECT_DIR$/js/mollist2.js" />
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mollist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="93" column="38" lean-forward="true" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+          <folding>
+            <marker date="1507834276934" expanded="true" signature="843:1437" ph="SELECT maste... pm_master" />
+            <marker date="1507834276934" expanded="true" signature="1473:2080" ph="SELECT * FRO... pm_master" />
+            <marker date="1507834276934" expanded="true" signature="1473:2086" ph="SELECT * FRO... pm_master" />
+            <marker date="1507834276934" expanded="true" signature="1473:2087" ph="SELECT maste... pm_master" />
+            <marker date="1507834276934" expanded="true" signature="2272:2326" ph="..." />
+            <marker date="1507834276934" expanded="true" signature="2293:2326" ph="..." />
+            <marker date="1507834276934" expanded="true" signature="4009:4041" ph="..." />
+            <marker date="1507834276934" expanded="true" signature="4124:4141" ph="..." />
+            <marker date="1507834276934" expanded="true" signature="4313:4363" ph="..." />
+            <marker date="1507834276934" expanded="true" signature="4446:4481" ph="..." />
+            <marker date="1507834276934" expanded="true" signature="6137:6443" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/funcation/othFunc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="718" column="0" lean-forward="true" selection-start-line="718" selection-start-column="0" selection-end-line="718" selection-end-column="0" />
+        <state relative-caret-position="1581">
+          <caret line="732" column="59" lean-forward="true" selection-start-line="732" selection-start-column="59" selection-end-line="732" selection-end-column="70" />
           <folding>
             <element signature="n#toSubstanceTitle#0;n#!!top" expanded="false" />
             <element signature="e#188#222#0#PHP" expanded="false" />
@@ -936,39 +975,6 @@
             <marker date="1507826382968" expanded="true" signature="23085:23090" ph="φ" />
             <marker date="1507826382968" expanded="true" signature="23124:23130" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mollist2.php" />
-    <entry file="file://$PROJECT_DIR$/js/mollist.js" />
-    <entry file="file://$PROJECT_DIR$/js/mollist2.js" />
-    <entry file="file://$PROJECT_DIR$/mollist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1507826381249" expanded="true" signature="758:781" ph="SELECT * FRO... pm_master" />
-            <marker date="1507826381249" expanded="true" signature="817:860" ph="SELECT * FRO... pm_master" />
-            <marker date="1507826381249" expanded="true" signature="2760:2792" ph="..." />
-            <marker date="1507826381249" expanded="true" signature="2875:2892" ph="..." />
-            <marker date="1507826381249" expanded="true" signature="3064:3114" ph="..." />
-            <marker date="1507826381249" expanded="true" signature="3197:3232" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

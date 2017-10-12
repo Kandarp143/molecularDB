@@ -9,6 +9,7 @@ require_once 'funcation/othFunc.php'; ?>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/1.10.15/pagination/input.js"></script>
+    <script src="//cdn.datatables.net/plug-ins/1.10.16/sorting/natural.js"></script>
     <script src="js/list.js"></script>
 </head>
 <body>
@@ -21,9 +22,43 @@ require_once 'funcation/othFunc.php'; ?>
 
     $pdo = Database::connect();
     if ($_SESSION['act'] == 'true') {
-        $tbl_sql = 'SELECT * FROM pm_master';
+        $tbl_sql = "SELECT
+    master_id,
+    display_id,
+    filename,
+    cas_no,
+    NAME,
+    bibtex_key,
+    IF(lj = 0, '', IF(lj = 1, CONCAT(lj,' L.J. Site'),CONCAT(lj,' L.J. Sites'))) as lj,
+    IF(dipole = 0, '', IF(dipole = 1, CONCAT(dipole,'  Dipole'), CONCAT(dipole,'  Dipoles'))) as dipole,
+    IF(charge = 0, '', IF(charge = 1, CONCAT(charge,' Charge'), CONCAT(charge,' Charges'))) as charge,
+    IF(quadrupole = 0,'',IF(quadrupole = 1, CONCAT(quadrupole,' Quadrupole'), CONCAT(quadrupole,' Quadrupoles'))) as quadrupole,
+    memory_loc,
+	bibtex_key,
+    disp_sh,
+    name,
+    type
+FROM
+    pm_master";
     } else {
-        $tbl_sql = 'SELECT * FROM pm_master where type ="Rigid"';
+        $tbl_sql = "SELECT
+    master_id,
+    display_id,
+    filename,
+    cas_no,
+    NAME,
+    bibtex_key,
+    IF(lj = 0, '', IF(lj = 1, CONCAT(lj,' L.J. Site'),CONCAT(lj,' L.J. Sites'))) as lj,
+    IF(dipole = 0, '', IF(dipole = 1, CONCAT(dipole,'  Dipole'), CONCAT(dipole,'  Dipoles'))) as dipole,
+    IF(charge = 0, '', IF(charge = 1, CONCAT(charge,' Charge'), CONCAT(charge,' Charges'))) as charge,
+    IF(quadrupole = 0,'',IF(quadrupole = 1, CONCAT(quadrupole,' Quadrupole'), CONCAT(quadrupole,' Quadrupoles'))) as quadrupole,
+    memory_loc,
+	bibtex_key,
+    disp_sh,
+    name,
+    type
+FROM
+    pm_master where type ='Rigid'";
     }
 
     ?>
@@ -41,7 +76,7 @@ require_once 'funcation/othFunc.php'; ?>
                     <th>Substance</th>
                     <th nowrap>CAS-No</th>
                     <th>Name</th>
-                    <th>LJ</th>
+                    <th>Lennard-Jones</th>
                     <th>Charge</th>
                     <th>Dipole</th>
                     <th>Quadrupole</th>
@@ -59,7 +94,7 @@ require_once 'funcation/othFunc.php'; ?>
                     <th>Substance</th>
                     <th nowrap>CAS-No</th>
                     <th>Name</th>
-                    <th>LJ</th>
+                    <th>Lennard-Jones</th>
                     <th>Charge</th>
                     <th>Dipole</th>
                     <th>Quadrupole</th>
@@ -91,17 +126,21 @@ require_once 'funcation/othFunc.php'; ?>
                         }
                     }
 
-                    echo "<td >" . $row['display_id'] . "</td>";
+                    if ($_SESSION['act'] == 'true') {
+                        echo "<td >" . $row['display_id'] . " [" . $row['display_id'] . "]" . "</td>";
+                    } else {
+                        echo "<td >" . $row['display_id'] . "</td>";
+                    }
                     $substance = toSubstanceTitle($row['filename']);
                     echo "<td><a onclick='setState()' href='moldetail.php?id=" . $row['master_id'] . "'>"
                         . $substance
                         . "</a></td>";
                     echo "<td nowrap>" . $row['cas_no'] . "</td>";
                     echo "<td>" . $row['name'] . "</td>";
-                    echo "<td >" . getModelType($row['lj'], 0, 0, 0) . "</td>";
-                    echo "<td >" . getModelType(0, $row['charge'], 0, 0) . "</td>";
-                    echo "<td >" . getModelType(0, 0, $row['dipole'], 0) . "</td>";
-                    echo "<td >" . getModelType(0, 0, 0, $row['quadrupole']) . "</td>";
+                    echo "<td >" . $row['lj'] . "</td>";
+                    echo "<td >" . $row['charge'] . "</td>";
+                    echo "<td >" . $row['dipole'] . "</td>";
+                    echo "<td >" . $row['quadrupole'] . "</td>";
                     echo "<td nowrap> [" . $row['bibtex_key'] . "] </tdnowrap>";
                     echo "<td>" . $row['type'] . "</td>";
                     if ($_SESSION['act'] == 'true') {

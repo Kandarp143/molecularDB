@@ -8,7 +8,14 @@ $(document).ready(function () {
     /* apply datatable to table */
     var table = $('#listmol').DataTable({
         stateSave: true,
-        pagingType: "input"
+        pagingType: "input",
+        columnDefs: [
+            {"type": "natural", targets: 0},
+            {"type": "natural", targets: 4},
+            {"type": "natural", targets: 5},
+            {"type": "natural", targets: 6},
+            {"type": "natural", targets: 7}
+        ]
     });
 
     /*add text input to each footer cell*/
@@ -18,7 +25,6 @@ $(document).ready(function () {
             $(this).html('<input type="text" size="1" />');
         }
     });
-
     /* append footer to header*/
     $('#listmol tfoot tr').appendTo('#listmol thead');
 
@@ -46,34 +52,11 @@ $(document).ready(function () {
                     .search(val ? '^' + val + '$' : '', true, false)
                     .draw();
             });
-        column.data().unique().sort().each(function (value, j) {
+        column.order('asc').draw(false).data().unique().each(function (value, j) {
             select.append('<option value="' + value + '">' + value + '</option>')
         });
 
     });
-
-
-    /* Sort function */
-    function naturalCompare(a, b) {
-        var ax = [], bx = [];
-
-        a.replace(/(\d+)|(\D+)/g, function (_, $1, $2) {
-            ax.push([$1 || Infinity, $2 || ""])
-        });
-        b.replace(/(\d+)|(\D+)/g, function (_, $1, $2) {
-            bx.push([$1 || Infinity, $2 || ""])
-        });
-
-        while (ax.length && bx.length) {
-            var an = ax.shift();
-            var bn = bx.shift();
-            var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
-            if (nn) return nn;
-        }
-
-        return ax.length - bx.length;
-    }
-
 
     /*Restore state in column filters*/
     var state = table.state.loaded();
@@ -92,10 +75,8 @@ $(document).ready(function () {
                         str = str.replace(/\\/g, '');
                         this.selected = (this.text == str);
                     });
-
             }
         });
-
         table.draw();
     }
 
