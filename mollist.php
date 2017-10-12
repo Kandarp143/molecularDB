@@ -3,15 +3,13 @@ require_once 'funcation/othFunc.php'; ?>
 <!-- Design by Kandarp -->
 <html>
 <head> <?php include('include/links.php') ?>
-    <link rel="stylesheet" type="text/css" href="css/datatable.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"
+          media="screen"/>
     <!--javascript-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/1.10.15/pagination/input.js"></script>
     <script src="js/list.js"></script>
-
-    <!--    <script src="js/mollist.js"></script>-->
-
 </head>
 <body>
 
@@ -43,7 +41,10 @@ require_once 'funcation/othFunc.php'; ?>
                     <th>Substance</th>
                     <th nowrap>CAS-No</th>
                     <th>Name</th>
-                    <th>Model Type</th>
+                    <th>LJ</th>
+                    <th>Charge</th>
+                    <th>Dipole</th>
+                    <th>Quadrupole</th>
                     <th>References</th>
                     <th>Type</th>
                     <?php if ($_SESSION['act'] == 'true') { ?>
@@ -58,7 +59,10 @@ require_once 'funcation/othFunc.php'; ?>
                     <th>Substance</th>
                     <th nowrap>CAS-No</th>
                     <th>Name</th>
-                    <th>Model Type</th>
+                    <th>LJ</th>
+                    <th>Charge</th>
+                    <th>Dipole</th>
+                    <th>Quadrupole</th>
                     <th>References</th>
                     <th>Type</th>
                     <?php if ($_SESSION['act'] == 'true') { ?>
@@ -86,14 +90,18 @@ require_once 'funcation/othFunc.php'; ?>
                             echo "<tr style='text-align: left;line-height: 23px;'>";
                         }
                     }
-                    echo "<td>" . $row['master_id'] . "</td>";
+
+                    echo "<td >" . $row['display_id'] . "</td>";
                     $substance = toSubstanceTitle($row['filename']);
                     echo "<td><a onclick='setState()' href='moldetail.php?id=" . $row['master_id'] . "'>"
                         . $substance
                         . "</a></td>";
                     echo "<td nowrap>" . $row['cas_no'] . "</td>";
                     echo "<td>" . $row['name'] . "</td>";
-                    echo "<td>" . $row['model_type'] . "</td>";
+                    echo "<td >" . getModelType($row['lj'], 0, 0, 0) . "</td>";
+                    echo "<td >" . getModelType(0, $row['charge'], 0, 0) . "</td>";
+                    echo "<td >" . getModelType(0, 0, $row['dipole'], 0) . "</td>";
+                    echo "<td >" . getModelType(0, 0, 0, $row['quadrupole']) . "</td>";
                     echo "<td nowrap> [" . $row['bibtex_key'] . "] </tdnowrap>";
                     echo "<td>" . $row['type'] . "</td>";
                     if ($_SESSION['act'] == 'true') {

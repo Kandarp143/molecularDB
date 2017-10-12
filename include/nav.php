@@ -59,11 +59,7 @@ if (!isset($_SESSION['usr'])) {
                     </li>
                 <?php } ?>
                 <li><a href="welcome.php">Home</a></li>
-                <?php if (isset($_SESSION['usr']) && $_SESSION['act'] == 'true') { ?>
-                    <li><a href="mollist2.php">Molecule List</a></li>
-                <?php } else { ?>
-                    <li><a href="mollist.php">Molecule List</a></li>
-                <?php } ?>
+                <li><a href="mollist.php">Molecule List</a></li>
                 <li><a href="reflist.php">References</a></li>
                 <li><a href="normen.php">Nomenclature</a></li>
                 <li><a href="contact.php">Contact</a></li>

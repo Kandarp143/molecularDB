@@ -1,8 +1,10 @@
+/**
+ * Created by Kandarp on 4/24/2017.
+ */
 /*for saved data retrive*/
 var data = null;
-
-
 $(document).ready(function () {
+
     /* apply datatable to table */
     var table = $('#listmol').DataTable({
         stateSave: true,
@@ -31,9 +33,8 @@ $(document).ready(function () {
             }
         });
     });
-
     /*to drop downs*/
-    table.columns([4, 5, 6]).every(function () {
+    table.columns([4, 5, 6, 7]).every(function () {
         var column = this;
         var select = $('<select><option value=""></option></select>')
             .appendTo($(column.footer()).empty())
@@ -48,7 +49,31 @@ $(document).ready(function () {
         column.data().unique().sort().each(function (value, j) {
             select.append('<option value="' + value + '">' + value + '</option>')
         });
+
     });
+
+
+    /* Sort function */
+    function naturalCompare(a, b) {
+        var ax = [], bx = [];
+
+        a.replace(/(\d+)|(\D+)/g, function (_, $1, $2) {
+            ax.push([$1 || Infinity, $2 || ""])
+        });
+        b.replace(/(\d+)|(\D+)/g, function (_, $1, $2) {
+            bx.push([$1 || Infinity, $2 || ""])
+        });
+
+        while (ax.length && bx.length) {
+            var an = ax.shift();
+            var bn = bx.shift();
+            var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
+            if (nn) return nn;
+        }
+
+        return ax.length - bx.length;
+    }
+
 
     /*Restore state in column filters*/
     var state = table.state.loaded();
@@ -70,8 +95,10 @@ $(document).ready(function () {
 
             }
         });
+
         table.draw();
     }
+
 
     /* initially once store */
     data = table.rows({filter: 'applied'}).data();
@@ -90,3 +117,7 @@ $(document).ready(function () {
         window.location.reload();
     });
 });
+
+
+
+
