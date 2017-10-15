@@ -106,6 +106,15 @@
             </td>
         </tr>
         <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <th colspan="3">Step 2 : Additional Configuration</th>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
             <td colspan="2">Display Shielding <input type="checkbox" name="disp_sh"></td>
             <td>
                 <div class="tooltip">[i]
@@ -114,12 +123,21 @@
             </td>
         </tr>
         <tr>
+            <td colspan="2">Display molecule in User Mode ? <input type="checkbox" name="user_mode"></td>
             <td>
-
+                <div class="tooltip">[i]
+                    <span class="tooltiptext">Tooltip text</span>
+                </div>
             </td>
         </tr>
         <tr>
-            <th colspan="3">Step 2 : Upload Files</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th colspan="3">Step 3 : Upload Files</th>
+        </tr>
+        <tr>
+            <td></td>
         </tr>
         <tr>
             <!--        step 2-->

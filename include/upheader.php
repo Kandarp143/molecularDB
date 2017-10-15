@@ -2,7 +2,11 @@
 <form action="processUpdateHead.php?id=<?php echo $master_id ?>" method="post" enctype="multipart/form-data"
       class="form">
     <table width="100%" class="beta">
-        <tr style="border: solid 1px red">
+        <tr>
+            <td>Database ID</td>
+            <td><?php echo $master_id ?></td>
+        </tr>
+        <tr>
             <td>Display ID<span class="msg-err"><b>*</b></span></td>
             <td><input name="displayId" type="text"
                        value="<?php echo intval($dis_id); ?>"
@@ -121,6 +125,18 @@
             <td colspan="2">Display Shielding <input type="checkbox" name="disp_sh"
                 <?php
                 echo $disp_sh == 0 ? '' : 'checked'
+                ?>
+            </td>
+            <td>
+                <div class="tooltip"> [i]
+                    <span class="tooltiptext"> Tooltip text </span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">Display molecule in User Mode ? <input type="checkbox" name="user_mode"
+                <?php
+                echo $user_mode == 0 ? '' : 'checked'
                 ?>
             </td>
             <td>

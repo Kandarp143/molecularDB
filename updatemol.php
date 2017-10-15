@@ -21,6 +21,7 @@ if (!empty($data)) {
     $charge = $data[0]['charge'];
     $dipole = $data[0]['dipole'];
     $quadrupole = $data[0]['quadrupole'];
+    $user_mode = $data[0]['user_mode'];
 
 }
 ?>

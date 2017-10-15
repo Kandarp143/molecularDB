@@ -58,7 +58,7 @@ FROM
     name,
     type
 FROM
-    pm_master where type ='Rigid' ORDER BY display_id ASC";
+    pm_master where user_mode = 1 ORDER BY display_id ASC";
     }
 
     ?>
