@@ -15,13 +15,7 @@
         <!-- end #content -->
         <div id="sidebar">
             <div id="sidebar-content">
-                <div id="sidebar-bgbtm">
-                    <ul>
-                        <li id="search">
-                            <!--                            <img src="img/laboratory.png" alt=""/>-->
-                        </li>
-                    </ul>
-                </div>
+                <img src="img/logo_BZS.jpg" style="margin-top: 15%">
             </div>
         </div>
         <!-- end #sidebar -->

@@ -39,7 +39,7 @@ require_once 'funcation/othFunc.php'; ?>
     name,
     type
 FROM
-    pm_master";
+    pm_master ORDER BY display_id ASC";
     } else {
         $tbl_sql = "SELECT
     master_id,
@@ -58,7 +58,7 @@ FROM
     name,
     type
 FROM
-    pm_master where type ='Rigid'";
+    pm_master where type ='Rigid' ORDER BY display_id ASC";
     }
 
     ?>

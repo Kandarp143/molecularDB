@@ -193,7 +193,15 @@ function referenceParameter($refs, $parameter)
                 }
             }
         }
-        return $ans;
+
+        /*extract year*/
+        if (preg_match('/(\d{4})/', $ans, $matches)) {
+            $year = $matches[0];
+            return $year;
+        } else {
+            return $ans;
+        }
+
     } else {
         return 'No reference found !';
     }
@@ -211,6 +219,7 @@ function referenceList()
     $db = new Database();
     $refs = $db->selectRecords('SELECT DISTINCT pm_bib.bib_key,pm_bib.bib_type,pm_bib.bib_title,pm_bib.param,pm_bib.value 
 FROM pm_bib ORDER BY pm_bib.bib_key', null);
+    
     $master_r = array();
     $new_r = array();
     $temp_id = 0;
