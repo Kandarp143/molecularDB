@@ -9,7 +9,7 @@
         $db = new Database();
         $res = $db->selectRecords('Select max(master_id) from pm_master', null);
         ?>
-        <tr style="border: solid 1px red">
+        <tr>
             <td>Display ID<span class="msg-err"><b>*</b></span></td>
             <td><input name="displayId" type="text" size="10" value="<?php echo $res[0][0] + 1 ?>"></td>
             <td>
@@ -128,6 +128,24 @@
                 <div class="tooltip">[i]
                     <span class="tooltiptext">Tooltip text</span>
                 </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <b> Available Download Formats </b>
+            </td>
+            <td>
+                <div class="tooltip">[i]
+                    <span class="tooltiptext">Tooltip text</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i>ms2</i> <input type="checkbox" name="ms2">
+            </td>
+            <td>
+                <i>ls1 mardyn</i> <input type="checkbox" name="ls1">
             </td>
         </tr>
         <tr>

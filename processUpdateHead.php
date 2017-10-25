@@ -52,13 +52,15 @@ if (empty($errors)) {
     $type = $_POST['type'];
     $disp_sh = isset($_POST['disp_sh']) ? 1 : 0;
     $user_mode = isset($_POST['user_mode']) ? 1 : 0;
+    $ls1 = isset($_POST['ls1']) ? 1 : 0;
+    $ms2 = isset($_POST['ms2']) ? 1 : 0;
 
 
     try {
         // update data
         $db = new Database();
-        $db->update('UPDATE pm_master SET display_id=?,filename = ?,cas_no =?,name = ?,model_type= ?,lj= ?,charge= ?, dipole= ?, quadrupole= ?, description = ?,type=?,disp_sh= ?,user_mode=? 
-WHERE master_id= ?', array($display_id, $substance, $casno, $name, $modeltype, $_POST['lj'], $_POST['charge'], $_POST['dipole'], $_POST['quadrupole'], $description, $type, $disp_sh, $user_mode, $master_id));
+        $db->update('UPDATE pm_master SET display_id=?,filename = ?,cas_no =?,name = ?,model_type= ?,lj= ?,charge= ?, dipole= ?, quadrupole= ?, description = ?,type=?,disp_sh= ?,user_mode=?,ls1=?,ms2=? 
+WHERE master_id= ?', array($display_id, $substance, $casno, $name, $modeltype, $_POST['lj'], $_POST['charge'], $_POST['dipole'], $_POST['quadrupole'], $description, $type, $disp_sh, $user_mode, $ls1, $ms2, $master_id));
 
         //upload profile
         if (!empty($_FILES['profile']['tmp_name'])) {

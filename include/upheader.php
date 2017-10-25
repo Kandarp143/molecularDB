@@ -146,6 +146,32 @@
             </td>
         </tr>
         <tr>
+            <td colspan="2">
+                <b> Available Download Formats </b>
+            </td>
+            <td>
+                <div class="tooltip">[i]
+                    <span class="tooltiptext">Tooltip text</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i>ms2</i> <input type="checkbox" name="ms2"
+                    <?php
+                    echo $ms2 == 0 ? '' : 'checked'
+                    ?>
+                >
+            </td>
+            <td>
+                <i>ls1 mardyn</i> <input type="checkbox" name="ls1"
+                    <?php
+                    echo $ls1 == 0 ? '' : 'checked'
+                    ?>
+                >
+            </td>
+        </tr>
+        <tr>
             <td>
 
             </td>

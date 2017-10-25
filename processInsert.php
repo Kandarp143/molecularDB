@@ -71,15 +71,17 @@ if (empty($errors)) {
     $profileName = '';
     $disp_sh = isset($_POST['disp_sh']) ? 1 : 0;
     $user_mode = isset($_POST['user_mode']) ? 1 : 0;
+    $ls1 = isset($_POST['ls1']) ? 1 : 0;
+    $ms2 = isset($_POST['ms2']) ? 1 : 0;
 
     // insert data
     try {
         $db = new Database();
         $db->beginTransaction();
         /* master record*/
-        $masterid = $db->insert('INSERT INTO pm_master (display_id,filename,cas_no,name,bibtex_ref_key,bibtex_key,bibtex_year,model_type,lj,charge,dipole,quadrupole,memory_loc,description,type,disp_sh,user_mode) 
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-            array($dis_id, $substance, $casno, $name, 0, '-', 0, $modeltype, $_POST['lj'], $_POST['charge'], $_POST['dipole'], $_POST['quadrupole'], 'img/profile/' . $profileName, $description, $type, $disp_sh, $user_mode));
+        $masterid = $db->insert('INSERT INTO pm_master (display_id,filename,cas_no,name,bibtex_ref_key,bibtex_key,bibtex_year,model_type,lj,charge,dipole,quadrupole,memory_loc,description,type,disp_sh,user_mode,ls1,ms2) 
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+            array($dis_id, $substance, $casno, $name, 0, '-', 0, $modeltype, $_POST['lj'], $_POST['charge'], $_POST['dipole'], $_POST['quadrupole'], 'img/profile/' . $profileName, $description, $type, $disp_sh, $user_mode, $ls1, $ms2));
 
         /*pm record (detail record)*/
         processMolDetail($masterid, parsePMFile($_FILES['pmfile']['tmp_name']), 'ins', $db);

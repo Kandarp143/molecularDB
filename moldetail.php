@@ -17,6 +17,8 @@ if (!empty($data)) {
     $type = $data[0]['type'];
     $ref = $data[0]['bibtex_key'];
     $disp_sh = $data[0]['disp_sh'];
+    $ms2 = $data[0]['ms2'];
+    $ls1 = $data[0]['ls1'];
 
 }
 ?>
