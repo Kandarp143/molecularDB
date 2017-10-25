@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<components version="05102017">
+<components version="18102017">
  <moleculetype id="1" name="C3H6O">
   <site type="LJ126" id="1">
    <coords><x>0.0000</x><y>0.0000</y><z>0.0000</z>   </coords>

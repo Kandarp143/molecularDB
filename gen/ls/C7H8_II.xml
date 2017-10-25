@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="18102017">
+ <moleculetype id="1" name="C7H8_II">
+  <site type="LJ126" id="1">
+   <coords><x>0.000</x><y>0.000</y><z>-2.7520</z>   </coords>
+   <sigma>3.586</sigma>
+   <epsilon>123.49</epsilon>
+   <mass>15.035</mass>
+  </site>
+  <site type="LJ126" id="2">
+   <coords><x>0.000</x><y>0.000</y><z>-0.9597</z>   </coords>
+   <sigma>2.794</sigma>
+   <epsilon>10.94</epsilon>
+   <mass>12.011</mass>
+  </site>
+  <site type="LJ126" id="3">
+   <coords><x>0.000</x><y>1.5720</y><z>-0.4615</z>   </coords>
+   <sigma>3.276</sigma>
+   <epsilon>100.52</epsilon>
+   <mass>13.020</mass>
+  </site>
+  <site type="LJ126" id="4">
+   <coords><x>0.000</x><y>-1.5720</y><z>-0.4615</z>   </coords>
+   <sigma>3.276</sigma>
+   <epsilon>100.52</epsilon>
+   <mass>13.020</mass>
+  </site>
+  <site type="LJ126" id="5">
+   <coords><x>0.000</x><y>1.5720</y><z>1.3557</z>   </coords>
+   <sigma>3.276</sigma>
+   <epsilon>100.52</epsilon>
+   <mass>13.020</mass>
+  </site>
+  <site type="LJ126" id="6">
+   <coords><x>0.000</x><y>-1.5720</y><z>1.3557</z>   </coords>
+   <sigma>3.276</sigma>
+   <epsilon>100.52</epsilon>
+   <mass>13.020</mass>
+  </site>
+  <site type="LJ126" id="7">
+   <coords><x>0.000</x><y>0.000</y><z>2.2729</z>   </coords>
+   <sigma>3.276</sigma>
+   <epsilon>100.52</epsilon>
+   <mass>13.020</mass>
+  </site>
+  <site type="Dipole" id="8">
+   <coords><x>0.000</x><y>0.000</y><z>-0.9597</z>   </coords>
+   <theta>180.0</theta>
+   <phi>-90.0</phi>
+   <dipole>0.440</dipole>
+   <mass>0.0</mass>
+  </site>
+  <site type="Quadrupole" id="9">
+   <coords><x>0.000</x><y>1.5720</y><z>-0.4615</z>   </coords>
+   <quadrupolemoment><theta>90.0</theta><phi>0.0</phi><abs>-1.688</abs></quadrupolemoment><site type="Quadrupole" id="10"><coords><x>0.000</x><y>-1.5720</y><z>-0.4615</z>    </coords>
+    <quadrupolemoment><theta>90.0</theta><phi>0.0</phi><abs>-1.688</abs></quadrupolemoment><site type="Quadrupole" id="11"><coords><x>0.000</x><y>1.5720</y><z>1.3557</z>     </coords>
+     <quadrupolemoment><theta>90.0</theta><phi>0.0</phi><abs>-1.688</abs></quadrupolemoment><site type="Quadrupole" id="12"><coords><x>0.000</x><y>-1.5720</y><z>1.3557</z>      </coords>
+      <quadrupolemoment><theta>90.0</theta><phi>0.0</phi><abs>-1.688</abs></quadrupolemoment><site type="Quadrupole" id="13"><coords><x>0.000</x><y>0.000</y><z>2.2729</z>       </coords>
+       <quadrupolemoment><theta>90.0</theta><phi>0.0</phi><abs>-1.688</abs>       </quadrupolemoment>
+       <mass>0.0</mass>
+      </site>
+      <momentsofinertia rotaxes="xyz">
+       <Ixx>0</Ixx>
+       <Iyy>0</Iyy>
+       <Izz>0</Izz>
+      </momentsofinertia>
+     </site>
+    </site>
+   </site>
+  </site>
+ </moleculetype>
+</components>
