@@ -2,7 +2,7 @@
 <?php
 require_once 'Vec.php';
 require_once 'database.php';
-require_once 'funcation/othFunc.php';
+require_once 'function/othFunc.php';
 ?>
 <!-- Design by Kandarp -->
 <html>

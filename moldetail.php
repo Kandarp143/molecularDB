@@ -2,8 +2,8 @@
 <?php
 require_once 'Vec.php';
 require_once 'database.php';
-require_once 'funcation/othFunc.php';
-require_once 'funcation/fileFunc.php';
+require_once 'function/othFunc.php';
+require_once 'function/fileFunc.php';
 $master_id = 0;
 $master_id = $_REQUEST['id'];
 $db = new Database();

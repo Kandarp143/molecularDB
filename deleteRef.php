@@ -1,7 +1,7 @@
 <?php include('include/header.php') ?>
 <?php
 require_once 'database.php';
-require_once 'funcation/othFunc.php';
+require_once 'function/othFunc.php';
 $ref_id = 0;
 $ref_id = $_REQUEST['id'];
 

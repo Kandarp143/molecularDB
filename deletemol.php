@@ -1,7 +1,7 @@
 <?php include('include/header.php') ?>
 <?php
 require_once 'database.php';
-require_once 'funcation/othFunc.php';
+require_once 'function/othFunc.php';
 $master_id = 0;
 $master_id = $_REQUEST['id'];
 $db = new Database();

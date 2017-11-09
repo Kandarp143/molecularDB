@@ -136,7 +136,7 @@ class Vec
         return $this->y;
     }
 
-    /*funcation to set (x,y,z) of point*/
+    /*function to set (x,y,z) of point*/
 
     public
     function setY($y)

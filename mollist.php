@@ -1,5 +1,5 @@
 <?php include('include/header.php');
-require_once 'funcation/othFunc.php'; ?>
+require_once 'function/othFunc.php'; ?>
 <!-- Design by Kandarp -->
 <html>
 <head> <?php include('include/links.php') ?>
