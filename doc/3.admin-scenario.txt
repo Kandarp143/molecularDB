@@ -1,8 +1,0 @@
-1.want to change image
-2.want to change text
-
-
-1. I want to change database user id and password
-2. I want to change admin email id to get nofication when user delete molecule
-3. I want to change text
-4. I want to change image
