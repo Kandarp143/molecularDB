@@ -1,6 +1,6 @@
 <?php
 require '../database.php';
-require_once '../function/fileFunc.php';
+require_once '../funcation/fileFunc.php';
 
 //getting data
 $id = isset($_GET['id']) ? $_GET['id'] : 0;

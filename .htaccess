@@ -2,4 +2,4 @@
 # set website first page 
 
 #DirectoryIndex wip.php
- DirectoryIndex index.php
+DirectoryIndex index.php

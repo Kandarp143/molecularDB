@@ -4,7 +4,7 @@
  */
 require_once 'database.php';
 require_once 'archiveMake.php';
-require_once 'function/fileFunc.php';
+require_once 'funcation/fileFunc.php';
 require_once 'config.php';
 
 $zipName = '';

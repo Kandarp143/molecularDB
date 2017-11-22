@@ -4,9 +4,9 @@ session_set_cookie_params(0);
 session_start();
 require_once 'database.php';
 require_once 'mailer/PHPMailerAutoload.php';
-require_once 'function/othFunc.php';
-require_once 'function/mailFunc.php';
-require_once 'function/fileFunc.php';
+require_once 'funcation/othFunc.php';
+require_once 'funcation/mailFunc.php';
+require_once 'funcation/fileFunc.php';
 require_once 'config.php';
 
 

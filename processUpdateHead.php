@@ -3,8 +3,8 @@
 session_set_cookie_params(0);
 session_start();
 require 'database.php';
-require_once 'function/fileFunc.php';
-require_once 'function/othFunc.php';
+require_once 'funcation/fileFunc.php';
+require_once 'funcation/othFunc.php';
 
 $errors = array();      // array to hold validation errors
 $data = array();      // array to pass back data

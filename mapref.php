@@ -1,6 +1,6 @@
 <?php include('include/header.php');
 require_once('database.php');
-require_once 'function/othFunc.php';
+require_once 'funcation/othFunc.php';
 $master_id = 0;
 $master_id = $_GET['id'];
 ?>
