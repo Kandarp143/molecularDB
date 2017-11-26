@@ -28,6 +28,8 @@ $rootLog = 'gen/log/';
 $rootProfileImg = 'img/profile/';
 $rootGenPM = 'gen/pm/';
 $rootGenLS = 'gen/ls/';
+$rootGenLammps = 'gen/lam/';
+$rootGenGro = 'gen/gro/';
 
 //norman page example molecule
 $normanEg = 135;
@@ -66,6 +68,8 @@ define("rootLog", $rootLog);
 define("rootProfileImg", $rootProfileImg);
 define("rootGenPM", $rootGenPM);
 define("rootGenLS", $rootGenLS);
+define("rootGenLAM", $rootGenLammps);
+define("rootGenGRO", $rootGenGro);
 define("normanEg", $normanEg);
 
 ?>

@@ -246,7 +246,7 @@ function makeZmatrix($masterId, $disp_sh)
 {
     $retrunArray = array();
     //getting molecule
-    $points  = getMolecule($masterId);
+    $points = getMolecule($masterId);
     //fine and tune
     foreach ($points as $p) {
         //assign tmp var
@@ -748,6 +748,156 @@ function getMolecule($masterId)
         $p->setOth($tmp);
     }
     return $points;
+}
+
+function splitMolSiteWise($molecule)
+{
+    $finalMolecule = array();
+    //saperate points sitewise (prepare input arrays)
+    $lj = array();
+    $ch = array();
+    $dp = array();
+    $qd = array();
+    foreach ($molecule as $p) {
+        if ($p->getSitetype() == 'LJ126') {
+            array_push($lj, $p);
+        } else if ($p->getSitetype() == 'Charge') {
+            array_push($ch, $p);
+        } else if ($p->getSitetype() == 'Dipole') {
+            array_push($dp, $p);
+        } else if ($p->getSitetype() == 'Quadrupole') {
+            array_push($qd, $p);
+        }
+    }
+
+    $finalMolecule['lj'] = $lj;
+    $finalMolecule['ch'] = $ch;
+    $finalMolecule['dp'] = $dp;
+    $finalMolecule['qd'] = $qd;
+
+    return $finalMolecule;
+}
+
+function splitPmatrixSiteWise($pmatrix)
+{
+    $finalMolecule = array();
+    //saperate points sitewise (prepare input arrays)
+    $lj = array();
+    $ch = array();
+    $dp = array();
+    $qd = array();
+    foreach ($pmatrix as $p) {
+        if ($p[0] == 'LJ126') {
+            array_push($lj, $p[2]);
+        } else if ($p[0] == 'Charge') {
+            array_push($ch, $p[2]);
+        } else if ($p[0] == 'Dipole') {
+            array_push($dp, $p[2]);
+        } else if ($p[0] == 'Quadrupole') {
+            array_push($qd, $p[2]);
+        }
+    }
+
+    $finalMolecule['lj'] = $lj;
+    $finalMolecule['ch'] = $ch;
+    $finalMolecule['dp'] = $dp;
+    $finalMolecule['qd'] = $qd;
+
+    return $finalMolecule;
+}
+
+function removeQuad($molecule)
+{
+    if (sizeof($molecule['qd']) > 0) {
+        //for each quaderpole
+        foreach ($molecule['qd'] as $q) {
+            //sigma calculation
+            $sigma = 0;
+            $cal = 10000;
+            $finalSigma = 0;
+            foreach ($molecule['lj'] as $l) {
+                //storing previous iteration
+                $lastCal = $cal;
+                $lastSigma = $sigma;
+                //current
+                $cal = sqrt(
+                    pow($l->getX() - $q->getX(), 2)
+                    + pow($l->getY() - $q->getY(), 2)
+                    + pow($l->getZ() - $q->getZ(), 2)
+                );
+                $sigma = $l->getOth()['Sigma'];
+
+                //decide final
+                if ($lastCal < $cal)
+                    $finalSigma = $lastSigma;
+                elseif ($lastCal == $cal)
+                    $finalSigma = min($lastSigma, $sigma);
+                else
+                    $finalSigma = $sigma;
+            }
+
+            //var for formulas
+            $a = $finalSigma / 20;
+
+
+            //declaring 3 charges for 1 qd
+            $c1 = new Vec();
+            $c2 = new Vec();
+            $c3 = new Vec();
+
+            //1st charge
+            $c1->setId(sizeof($molecule['ch']) + 1);
+            $c1->setName($q->getName() . '[e_1]');
+            $c1->setSitetype('Charge');
+            $c1->setX($q->getX() + $a * (sin(deg2rad($q->getOth()['Theta'])) * cos(deg2rad($q->getOth()['Phi']))));
+            $c1->setY($q->getY() + $a * (sin(deg2rad($q->getOth()['Theta'])) * sin(deg2rad($q->getOth()['Phi']))));
+            $c1->setZ($q->getZ() + $a * cos(deg2rad($q->getOth()['Theta'])));
+            //oth
+            $oth['Site'] = sizeof($molecule['ch']) + 1;
+            $oth['SiteName'] = $q->getName() . '[e_1]';
+            $oth['Mass'] = $q->getOth()['Mass'] / 3;
+            $oth['Charge'] = (-0.2082 * $q->getOth()['Quadrupole']) / (2 * pow($a, 2));
+            $oth['Shielding'] = 1;
+            $c1->setOth($oth);
+            array_push($molecule['ch'], $c1);
+
+            //2st charge
+            $c2->setId(sizeof($molecule['ch']) + 1);
+            $c2->setName($q->getName() . '[e_2]');
+            $c2->setSitetype('Charge');
+            $c2->setX($q->getX());
+            $c2->setY($q->getY());
+            $c2->setZ($q->getZ());
+            //oth
+            $oth['Site'] = sizeof($molecule['ch']) + 1;
+            $oth['SiteName'] = $q->getName() . '[e_2]';
+            $oth['Mass'] = $q->getOth()['Mass'] / 3;
+            $oth['Charge'] = (0.2082 * $q->getOth()['Quadrupole']) / (2 * pow($a, 2));
+            $oth['Shielding'] = 1;
+            $c2->setOth($oth);
+            array_push($molecule['ch'], $c2);
+
+            //3st charge
+            $c3->setId(sizeof($molecule['ch']) + 1);
+            $c3->setName($q->getName() . '[e_3]');
+            $c3->setSitetype('Charge');
+            $c3->setX($q->getX() - $a * (sin(deg2rad($q->getOth()['Theta'])) * cos(deg2rad($q->getOth()['Phi']))));
+            $c3->setY($q->getY() - $a * (sin(deg2rad($q->getOth()['Theta'])) * sin(deg2rad($q->getOth()['Phi']))));
+            $c3->setZ($q->getZ() - $a * cos(deg2rad($q->getOth()['Theta'])));
+            //oth
+            $oth['Site'] = sizeof($molecule['ch']) + 1;
+            $oth['SiteName'] = $q->getName() . '[e_3]';
+            $oth['Mass'] = $q->getOth()['Mass'] / 3;
+            $oth['Charge'] = (-0.2082 * $q->getOth()['Quadrupole']) / (2 * pow($a, 2));
+            $oth['Shielding'] = 1;
+            $c3->setOth($oth);
+            array_push($molecule['ch'], $c3);
+        }
+    }
+
+    //removing qd
+    $molecule['qd'] = array();
+    return $molecule;
 }
 
 ?>

@@ -1,6 +1,5 @@
 <table>
     <?php if ($ms2 == 1) { ?>
-
         <tr>
             <th>
                 <b><i>ms2</i></b>
@@ -26,4 +25,14 @@
             </td>
         </tr>
     <?php } ?>
+    <tr>
+        <th>
+            <i>lammps</i>
+        </th>
+        <th>:</th>
+        <td>
+            <a class="a-button"
+               href="include/generateFile.php?id=<?php echo $master_id ?>&typ=lam"><?php echo toSubstanceTitle($substance) . '.zip' ?></a>
+        </td>
+    </tr>
 </table>

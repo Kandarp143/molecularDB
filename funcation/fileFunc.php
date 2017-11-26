@@ -214,12 +214,249 @@ FROM pm_detail a WHERE a.master_id= ?)b GROUP BY b.site_type', array($masterId))
 
 function genPMFile($masterId, $filePath, $fileName)
 {
+    //generating file
     ob_start();
     printPMData($masterId);
     $content = ob_get_contents();
     ob_end_clean();
     $actualFile = $filePath . $fileName;
     file_put_contents($actualFile, $content);
+}
+
+function genLAMmolFile($masterId, $filePath, $fileName)
+{
+    //declaring output
+    $coords = array();
+    $types = array();
+    //supporting array
+    $CHAR[0] = 0;
+    $DIP[0] = 0;
+    $SIG = null;
+    $EPS = null;
+
+    //getting require data
+    $molecule = removeQuad(splitMolSiteWise(getMolecule($masterId)));
+    $pmatrix = splitPmatrixSiteWise(makeZmatrix($masterId, 0)['pmatrix']);
+
+    /*********************************************** COORDS ***********************/
+    /* 1 PART = LJ SITES */
+    foreach ($molecule['lj'] as $p) {
+        $tmp = null;
+        $tmp['id'] = $p->getId();
+        $tmp['x'] = $p->getX();
+        $tmp['y'] = $p->getY();
+        $tmp['z'] = $p->getZ();
+        array_push($coords, $tmp);
+    }
+    /* 2 PART = CHARGES */
+    foreach ($molecule['ch'] as $c) {
+        $isSame = false;
+        foreach ($molecule['lj'] as $l) {
+            if ($c->getX() == $l->getX() && $c->getY() == $l->getY() && $c->getZ() == $l->getZ()) {
+                $CHAR[$l->getId()] = $c->getOth()['Charge'];
+                $isSame = true;
+            }
+        }
+        //if charge don't have lj co ordinate
+        if (!$isSame) {
+            $id = $coords[sizeof($coords) - 1]['id'] + 1;
+            //add to coords
+            $tmp = null;
+            $tmp['id'] = $id;
+            $tmp['x'] = $c->getX();
+            $tmp['y'] = $c->getY();
+            $tmp['z'] = $c->getZ();
+            array_push($coords, $tmp);
+            //add to char
+            $CHAR[$id] = $c->getOth()['Charge'];
+        }
+    }
+    /* 3 PART = DIPOLE */
+    foreach ($molecule['dp'] as $d) {
+        $isSame = false;
+        foreach ($coords as $co) {
+            if ($d->getX() == $co['x'] && $d->getY() == $co['y'] && $d->getZ() == $co['z']) {
+                $DIP[$co['id']] = $d->getOth()['Dipole'];
+                $isSame = true;
+            }
+        }
+        //if charge don't have lj co ordinate
+        if (!$isSame) {
+            $id = $coords[sizeof($coords) - 1]['id'] + 1;
+            //add to coords
+            $tmp = null;
+            $tmp['id'] = $id;
+            $tmp['x'] = $d->getX();
+            $tmp['y'] = $d->getY();
+            $tmp['z'] = $d->getZ();
+            array_push($coords, $tmp);
+            //add to char
+            $DIP[$id] = $d->getOth()['Dipole'];
+        }
+    }
+
+    /*********************************************** TYPES ***********************/
+    //SIG and EPS
+    $m = sizeof($coords);
+    for ($i = 0; $i <= $m; $i++) {
+        //update dimenison
+        if (!array_key_exists($i, $CHAR))
+            $CHAR[$i] = 0;
+        if (!array_key_exists($i, $DIP))
+            $DIP[$i] = 0;
+        //static dimenison
+        $SIG[$i] = 0;
+        $EPS[$i] = 0;
+    }
+    //sorting all
+    ksort($CHAR);
+    ksort($DIP);
+    ksort($SIG);
+    ksort($EPS);
+    foreach ($pmatrix['lj'] as $p) {
+        $SIG[$p['Site']] = $p['Sigma'];
+        $EPS[$p['Site']] = $p['Epsilon'] * 0.0000861733035;
+    }
+
+    //TYPE array column wise (column1 = key , column2 = value;)
+    // column1
+    for ($i = 1; $i <= $m; $i++) {
+        $types[$i] = 0;
+    }
+    //column2
+    $types[1] = 1;
+    for ($i = 2; $i <= $m; $i++) {
+        $isSame = false;
+        for ($j = 0; $j < $i; $j++) {
+            if ($CHAR[$i] == $CHAR[$j] && $DIP[$i] == $DIP[$j] && $SIG[$i] == $SIG[$j] && $EPS[$i] == $EPS[$j]) {
+                $types[$i] = $types[$j];
+                $isSame = true;
+            }
+        }
+        if (!$isSame) {
+            $types[$i] = $types[$i - 1] + 1;
+        }
+    }
+
+    // printing output
+    $LAMmolData['name'] = strtok($fileName, '.');
+    $LAMmolData['coords'] = $coords;
+    $LAMmolData['types'] = $types;
+    $LAMmolData['CHAR'] = $CHAR;
+    $LAMmolData['DIP'] = $DIP;
+    $LAMmolData['SIG'] = $SIG;
+    $LAMmolData['EPS'] = $EPS;
+
+    /*********************************************** GENERATE FILE ***********************/
+    ob_start();
+    printLAMmolData($LAMmolData);
+    $content = ob_get_contents();
+    ob_end_clean();
+    $actualFile = $filePath . $fileName;
+    file_put_contents($actualFile, $content);
+
+    //returning output
+    return $LAMmolData;
+}
+
+function printLAMmolData($lam)
+{
+    //heading
+    print  "#" . $lam["name"] . " Model Bolzmann-Zuse Society \n\n";
+
+    //stats
+    print  sizeof($lam['coords']) . " atoms \n";
+    print  "0" . " bonds \n";
+    print  "0" . " angles \n";
+    print  "0" . " dihedrals \n\n\n";
+
+    //coords
+    print  "Coords \n";
+    foreach ($lam['coords'] as $coord) {
+        print "\n";
+        foreach ($coord as $c) {
+            print $c . "  ";
+        }
+    }
+
+    //types
+    print  "\n\n\nTypes \n\n";
+    foreach ($lam['types'] as $key => $value) {
+        print $key . "  " . $value . "\n";
+    }
+
+}
+
+function genLAMintFile($masterId, $filePath, $fileName, $LAMmolData)
+{
+    //generating file
+    ob_start();
+    printLAMintData($LAMmolData, $masterId);
+    $content = ob_get_contents();
+    ob_end_clean();
+    $actualFile = $filePath . $fileName;
+    file_put_contents($actualFile, $content);
+}
+
+function printLAMintData($lam, $masterId)
+{
+    //getting require data
+    $molecule = removeQuad(splitMolSiteWise(getMolecule($masterId)));
+
+    //modify type array - remove duplicate
+    $types = array_unique($lam['types']);
+
+    print "# Set interaction parameters between particles \n\n";
+
+    print "pair_style         lj/cut/dipole/cut $$ \n";
+    print "pair_modify        mix arithmetic \n\n";
+
+
+    print "#int\n";
+    foreach ($types as $key => $val) {
+
+        print "pair_coeff      ";
+        if ($lam['EPS'][$key] == 0 && $lam['SIG'][$key] == 0) {
+            print $key . "  " . "*" . " lj/cut/dipole/cut  0.0  0.0 \n";
+        } else {
+            print $key . "  " . $key . " lj/cut/dipole/cut  " . $lam['EPS'][$key] . "  " . $lam['SIG'][$key] . "\n";
+        }
+
+
+    }
+
+    print "\n\n#charge\n";
+    foreach ($types as $key => $val) {
+        if ($lam['CHAR'][$key] != 0) {
+            print "set type  " . $key . " charge  " . $lam['CHAR'][$key] . " \n";
+        }
+    }
+
+    print "\n\n#mass\n";
+    //declaring mass
+    for ($i = 0; $i < sizeof($lam['coords']); $i++) {
+        $MASS[$lam['coords'][$i]['id']] = 0.000001;
+        /* updateing mas */
+        foreach ($molecule['lj'] as $lj) {
+            if ($lam['coords'][$i]['x'] == $lj->getX() && $lam['coords'][$i]['y'] == $lj->getY() && $lam['coords'][$i]['z'] == $lj->getZ()) {
+                $MASS[$lam['coords'][$i]['id']] = $MASS[$lam['coords'][$i]['id']] + $lj->getOth()['Mass'];
+            }
+        }
+        foreach ($molecule['ch'] as $lj) {
+            if ($lam['coords'][$i]['x'] == $lj->getX() && $lam['coords'][$i]['y'] == $lj->getY() && $lam['coords'][$i]['z'] == $lj->getZ()) {
+                $MASS[$lam['coords'][$i]['id']] = $MASS[$lam['coords'][$i]['id']] + $lj->getOth()['Mass'];
+            }
+        }
+        foreach ($molecule['dp'] as $lj) {
+            if ($lam['coords'][$i]['x'] == $lj->getX() && $lam['coords'][$i]['y'] == $lj->getY() && $lam['coords'][$i]['z'] == $lj->getZ()) {
+                $MASS[$lam['coords'][$i]['id']] = $MASS[$lam['coords'][$i]['id']] + $lj->getOth()['Mass'];
+            }
+        }
+
+        print "mass " . $lam['coords'][$i]['id'] ." ".$MASS[$lam['coords'][$i]['id']] . " \n";
+    }
+
+
 }
 
 function genLsFile($masterId, $filePath, $fileName)
