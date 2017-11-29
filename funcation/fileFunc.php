@@ -452,6 +452,11 @@ function printLAMintData($lam, $masterId)
             }
         }
 
+        //check.
+        if ($MASS[$lam['coords'][$i]['id']] != 0.000001) {
+            $MASS[$lam['coords'][$i]['id']] = $MASS[$lam['coords'][$i]['id']] - 0.000001;
+        }
+
         print "mass " . $lam['coords'][$i]['id'] . " " . $MASS[$lam['coords'][$i]['id']] . " \n";
     }
 
