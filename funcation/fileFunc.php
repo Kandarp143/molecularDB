@@ -414,12 +414,11 @@ function printLAMintData($lam, $masterId)
 
     print "#int\n";
     foreach ($types as $key => $val) {
-
         print "pair_coeff      ";
         if ($lam['EPS'][$key] == 0 && $lam['SIG'][$key] == 0) {
-            print $key . "  " . "*" . " lj/cut/dipole/cut  0.0  0.0 \n";
+            print $val . "  " . "*" . " lj/cut/dipole/cut  0.0  0.0 \n";
         } else {
-            print $key . "  " . $key . " lj/cut/dipole/cut  " . $lam['EPS'][$key] . "  " . $lam['SIG'][$key] . "\n";
+            print $val . "  " . $val . " lj/cut/dipole/cut  " . $lam['EPS'][$key] . "  " . $lam['SIG'][$key] . "\n";
         }
 
 
@@ -428,7 +427,7 @@ function printLAMintData($lam, $masterId)
     print "\n\n#charge\n";
     foreach ($types as $key => $val) {
         if ($lam['CHAR'][$key] != 0) {
-            print "set type  " . $key . " charge  " . $lam['CHAR'][$key] . " \n";
+            print "set type  " . $val . " charge  " . $lam['CHAR'][$key] . " \n";
         }
     }
 
@@ -453,7 +452,7 @@ function printLAMintData($lam, $masterId)
             }
         }
 
-        print "mass " . $lam['coords'][$i]['id'] ." ".$MASS[$lam['coords'][$i]['id']] . " \n";
+        print "mass " . $lam['coords'][$i]['id'] . " " . $MASS[$lam['coords'][$i]['id']] . " \n";
     }
 
 
