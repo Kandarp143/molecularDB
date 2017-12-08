@@ -1,0 +1,22 @@
+# Set interaction parameters between particles 
+
+pair_style         lj/cut/dipole/cut $$ 
+pair_modify        mix arithmetic 
+
+#int
+1 -1pair_coeff      1  1 lj/cut/dipole/cut  0.011804880846465  3.4896
+3 -2pair_coeff      2  * lj/cut/dipole/cut  0.0  0.0 
+4 -3pair_coeff      3  * lj/cut/dipole/cut  0.0  0.0 
+
+
+#charge
+set type  2 charge  -2.8302994017358 
+set type  3 charge  2.8302994017358 
+
+
+#mass
+mass 1 15.035001 
+mass 2 15.035001 
+mass 3 1.0E-6 
+mass 4 1.0E-6 
+mass 5 1.0E-6 
