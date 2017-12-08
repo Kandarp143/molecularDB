@@ -144,10 +144,10 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="1378" />
-    <option name="height" value="715" />
+    <option name="width" value="1288" />
+    <option name="height" value="685" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -164,6 +164,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,13 +175,17 @@
             <path>
               <item name="molecularDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="molecularDB" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="funcation" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="molecularDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="molecularDB" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="gen" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -387,11 +392,13 @@
       <workItem from="1511525140272" duration="7186000" />
       <workItem from="1511622376560" duration="6124000" />
       <workItem from="1511706859349" duration="12918000" />
+      <workItem from="1511947975187" duration="1993000" />
+      <workItem from="1512727593245" duration="63000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257538000" />
+    <option name="totallyTimeSpent" value="259594000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,10 +410,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1378" height="715" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2245827" sideWeight="0.7463175" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23071104" sideWeight="0.7463175" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -547,7 +554,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/funcation/fileFunc.php</url>
-          <line>455</line>
+          <line>459</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
@@ -761,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="53" column="86" lean-forward="true" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -785,7 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,9 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="94" column="50" lean-forward="false" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
-          <folding>
-            <marker date="1511386654648" expanded="true" signature="271:314" ph="select * fro... pm_master" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,29 +1032,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="83" column="94" lean-forward="false" selection-start-line="83" selection-start-column="94" selection-end-line="83" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php" />
     <entry file="file://$PROJECT_DIR$/include/generateFile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-          <folding>
-            <element signature="e#403#1504#0#PHP" expanded="false" />
-            <element signature="e#1341#1502#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lammps.php" />
     <entry file="file://$PROJECT_DIR$/funcation/fileFunc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="417" column="31" lean-forward="false" selection-start-line="417" selection-start-column="31" selection-end-line="417" selection-end-column="31" />
+        <state relative-caret-position="467">
+          <caret line="456" column="89" lean-forward="false" selection-start-line="456" selection-start-column="89" selection-end-line="456" selection-end-column="89" />
           <folding>
             <element signature="n#clearDirectory#0;n#!!top" expanded="false" />
             <element signature="n#printPMData#0;n#!!top" expanded="false" />
@@ -1071,27 +1059,19 @@
             <element signature="n#genLAMintFile#0;n#!!top" expanded="false" />
             <element signature="n#genLsFile#0;n#!!top" expanded="false" />
             <element signature="n#processMolDetail#0;n#!!top" expanded="false" />
-            <marker date="1511723109329" expanded="true" signature="3162:3206" ph="select type pm_master" />
-            <marker date="1511723109329" expanded="true" signature="3318:3442" ph="SELECT COUNT... site_type" />
-            <marker date="1511723109329" expanded="true" signature="3374:3439" ph="SELECT DISTI... pm_detail" />
-            <marker date="1511723109329" expanded="true" signature="3576:3717" ph="SELECT COUNT... site_type" />
-            <marker date="1511723109329" expanded="true" signature="3621:3694" ph="SELECT DISTI... pm_detail" />
-            <marker date="1511723109329" expanded="true" signature="3914:3956" ph="SELECT * FRO... pm_detail" />
-            <marker date="1511723109329" expanded="true" signature="4707:4751" ph="SELECT * FRO... pm_flexible" />
-            <marker date="1511723109329" expanded="true" signature="14743:14785" ph="SELECT * FRO... pm_detail" />
-            <marker date="1511723109329" expanded="true" signature="18325:18366" ph="DELETE FROM " />
-            <marker date="1511723109329" expanded="true" signature="19187:19265" ph="INSERT INTO pm_detail... " />
-            <marker date="1511723109329" expanded="true" signature="20317:20407" ph="INSERT INTO pm_flexible... " />
-            <marker date="1511723109329" expanded="true" signature="20710:20800" ph="INSERT INTO pm_flexible... " />
+            <marker date="1511950032219" expanded="true" signature="3162:3206" ph="select type pm_master" />
+            <marker date="1511950032219" expanded="true" signature="3318:3442" ph="SELECT COUNT... site_type" />
+            <marker date="1511950032219" expanded="true" signature="3374:3439" ph="SELECT DISTI... pm_detail" />
+            <marker date="1511950032219" expanded="true" signature="3576:3717" ph="SELECT COUNT... site_type" />
+            <marker date="1511950032219" expanded="true" signature="3621:3694" ph="SELECT DISTI... pm_detail" />
+            <marker date="1511950032219" expanded="true" signature="3914:3956" ph="SELECT * FRO... pm_detail" />
+            <marker date="1511950032219" expanded="true" signature="4707:4751" ph="SELECT * FRO... pm_flexible" />
+            <marker date="1511950032219" expanded="true" signature="14922:14964" ph="SELECT * FRO... pm_detail" />
+            <marker date="1511950032219" expanded="true" signature="18504:18545" ph="DELETE FROM " />
+            <marker date="1511950032219" expanded="true" signature="19366:19444" ph="INSERT INTO pm_detail... " />
+            <marker date="1511950032219" expanded="true" signature="20496:20586" ph="INSERT INTO pm_flexible... " />
+            <marker date="1511950032219" expanded="true" signature="20889:20979" ph="INSERT INTO pm_flexible... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lammps.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="269" column="17" lean-forward="false" selection-start-line="269" selection-start-column="17" selection-end-line="269" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
