@@ -11,6 +11,26 @@ require_once 'funcation/othFunc.php'; ?>
     <script src="https://cdn.datatables.net/plug-ins/1.10.15/pagination/input.js"></script>
     <script src="//cdn.datatables.net/plug-ins/1.10.16/sorting/natural.js"></script>
     <script src="js/list.js"></script>
+    <!--custom style for data tabels-->
+    <style>
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            margin-left: 10px;
+            border: 1px solid gray;
+            font-weight: bold;
+        }
+
+        .paginate_input {
+            width: 50px;
+        }
+
+        .previous {
+            margin-left: 10px;
+        }
+
+        .paginate_page {
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
 

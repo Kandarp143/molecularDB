@@ -57,7 +57,10 @@ $(document).ready(function () {
         });
 
     });
-
+    /* after dropdown ordered, need to redraw table for sorting first column */
+    table
+        .order([[0, 'asc']])
+        .draw();
     /*Restore state in column filters*/
     var state = table.state.loaded();
     if (state) {
