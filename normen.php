@@ -7,7 +7,9 @@ require_once('config.php');
 
 $master_id = normanEg;
 $disp_sh = false;
-$returnArray = makeZmatrix($master_id, $disp_sh);
+//getting molecule
+$points = getMolecule($master_id);
+$returnArray = makeZmatrix($points, $disp_sh);
 $zmatrix = $returnArray['zmatrix'];
 $maker = $returnArray['maker'];
 ?>

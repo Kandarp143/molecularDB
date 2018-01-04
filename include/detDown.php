@@ -35,4 +35,14 @@
                href="include/generateFile.php?id=<?php echo $master_id ?>&typ=lam"><?php echo toSubstanceTitle($substance) . '.zip' ?></a>
         </td>
     </tr>
+    <tr>
+        <th>
+            <i>gromacs</i>
+        </th>
+        <th>:</th>
+        <td>
+            <a class="a-button"
+               href="include/generateFile.php?id=<?php echo $master_id ?>&typ=gro"><?php echo toSubstanceTitle($substance) . '.zip' ?></a>
+        </td>
+    </tr>
 </table>

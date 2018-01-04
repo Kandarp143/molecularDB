@@ -242,11 +242,9 @@ FROM pm_bib ORDER BY pm_bib.bib_key', null);
 }
 
 /*func to generate Z-Matrix (Detail Page)  of molecule */
-function makeZmatrix($masterId, $disp_sh)
+function makeZmatrix($points, $disp_sh)
 {
     $retrunArray = array();
-    //getting molecule
-    $points = getMolecule($masterId);
     //fine and tune
     foreach ($points as $p) {
         //assign tmp var
@@ -898,6 +896,106 @@ function removeQuad($molecule)
     //removing qd
     $molecule['qd'] = array();
     return $molecule;
+}
+
+function removeDipole($molecule)
+{
+    if (sizeof($molecule['dp']) > 0) {
+        //for each quaderpole
+        foreach ($molecule['dp'] as $d) {
+            //sigma calculation
+            $sigma = 0;
+            $cal = 10000;
+            $finalSigma = 0;
+            foreach ($molecule['lj'] as $l) {
+                //storing previous iteration
+                $lastCal = $cal;
+                $lastSigma = $sigma;
+                //current
+                $cal = sqrt(
+                    pow($l->getX() - $d->getX(), 2)
+                    + pow($l->getY() - $d->getY(), 2)
+                    + pow($l->getZ() - $d->getZ(), 2)
+                );
+                $sigma = $l->getOth()['Sigma'];
+
+                //decide final
+                if ($lastCal < $cal)
+                    $finalSigma = $lastSigma;
+                elseif ($lastCal == $cal)
+                    $finalSigma = min($lastSigma, $sigma);
+                else
+                    $finalSigma = $sigma;
+            }
+
+            //var for formulas
+            $a = $finalSigma / 40;
+
+
+            //declaring 2 charges for 1 dp
+            $c1 = new Vec();
+            $c2 = new Vec();
+
+            //1st charge
+            $c1->setId(sizeof($molecule['ch']) + 1);
+            $c1->setName($d->getName() . '[e_1]');
+            $c1->setSitetype('Charge');
+            $c1->setX($d->getX() + $a * (sin(deg2rad($d->getOth()['Theta'])) * cos(deg2rad($d->getOth()['Phi']))));
+            $c1->setY($d->getY() + $a * (sin(deg2rad($d->getOth()['Theta'])) * sin(deg2rad($d->getOth()['Phi']))));
+            $c1->setZ($d->getZ() + $a * cos(deg2rad($d->getOth()['Theta'])));
+            //oth
+            $oth['Site'] = sizeof($molecule['ch']) + 1;
+            $oth['SiteName'] = $d->getName() . '[e_1]';
+            $oth['Mass'] = $d->getOth()['Mass'] / 2;
+            $oth['Charge'] = (-0.2082 * $d->getOth()['Dipole']) / (2 * $a);
+            $oth['Shielding'] = 1;
+            $c1->setOth($oth);
+            array_push($molecule['ch'], $c1);
+
+            //2nd charge
+            $c2->setId(sizeof($molecule['ch']) + 1);
+            $c2->setName($d->getName() . '[e_2]');
+            $c2->setSitetype('Charge');
+            $c2->setX($d->getX() - $a * (sin(deg2rad($d->getOth()['Theta'])) * cos(deg2rad($d->getOth()['Phi']))));
+            $c2->setY($d->getY() - $a * (sin(deg2rad($d->getOth()['Theta'])) * sin(deg2rad($d->getOth()['Phi']))));
+            $c2->setZ($d->getZ() - $a * cos(deg2rad($d->getOth()['Theta'])));
+            //oth
+            $oth['Site'] = sizeof($molecule['ch']) + 1;
+            $oth['SiteName'] = $d->getName() . '[e_3]';
+            $oth['Mass'] = $d->getOth()['Mass'] / 3;
+            $oth['Charge'] = (-0.2082 * $d->getOth()['Dipole']) / (2 * $a);
+            $oth['Shielding'] = 1;
+            $c2->setOth($oth);
+            array_push($molecule['ch'], $c2);
+        }
+    }
+
+    //removing dp
+    $molecule['dp'] = array();
+    return $molecule;
+}
+
+
+function modifyArrForGro($lamArray)
+{
+    // initial modyfing arrays
+//MASS
+    foreach ($lamArray['MASS'] as $key => $val) {
+        if ($val == 0.000001) {
+            $lamArray['MASS'][$key] = 0.00000;
+        } else {
+            $lamArray['MASS'][$key] = round($val, 4);
+        }
+    }
+//EPS
+    foreach ($lamArray['EPS'] as $key => $val) {
+        $lamArray['EPS'][$key] = round($val * 96.48533274, 4);
+    }
+//SIG
+    foreach ($lamArray['SIG'] as $key => $val) {
+        $lamArray['SIG'][$key] = round($val * 0.1, 4);
+    }
+    return $lamArray;
 }
 
 ?>

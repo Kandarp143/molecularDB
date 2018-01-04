@@ -1,5 +1,6 @@
 <?php
-$returnArray = makeZmatrix($master_id, $disp_sh);
+$points = getMolecule($master_id);
+$returnArray = makeZmatrix($points, $disp_sh);
 $zmatrix = $returnArray['zmatrix'];
 $pmatrix = $returnArray['pmatrix'];
 $maker = $returnArray['maker'];

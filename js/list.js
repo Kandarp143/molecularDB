@@ -40,7 +40,7 @@ $(document).ready(function () {
         });
     });
     /*to drop downs*/
-    table.columns([4, 5, 6, 7]).every(function () {
+    table.columns([4, 5, 6, 7, 8]).every(function () {
         var column = this;
         var select = $('<select><option value=""></option></select>')
             .appendTo($(column.footer()).empty())

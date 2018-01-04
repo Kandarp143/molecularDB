@@ -43,6 +43,32 @@ if ($typ === 'ms2') {
     } else {
         echo 'Could not create a zip archive';
     }
+} elseif ($typ === 'gro') {
+    $type = 'application/zip';
+    $filePath = '../' . rootGenGRO;
+    /* file require fields */
+    $dirName = $fileName . date("Ymdhis");
+    mkdir($filePath . $dirName . "/");
+    $filePath = $filePath . $dirName . "/";
+    $zipName = $filePath . $fileName . '.zip';
+
+
+    /* generate actual files */
+    genGROffitpFile($filePath, 'forcefield.itp');
+    genGROmolitpFile($id, $filePath, $fileName . '.itp');
+    genGROpdbFile($id, $filePath, $fileName . '.pdb');
+    genGROatpFile($id, $filePath, 'atomtypes.atp');
+
+
+    /* archive (zip) generated files into dir */
+    $za = new archiveMake();
+    $res = $za->open($zipName, ZipArchive::CREATE);
+    if ($res === TRUE) {
+        $za->addDir($filePath, basename($filePath));
+        $za->close();
+    } else {
+        echo 'Could not create a zip archive';
+    }
 }
 
 
@@ -53,7 +79,7 @@ header('Pragma: no-cache');
 header('Expires: 0');
 set_time_limit(0);
 
-if ($typ === 'lam') {
+if ($typ === 'lam' || $typ === 'gro') {
     //for ZIP file
     header("Location: $zipName");
 } else {
