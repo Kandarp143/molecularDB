@@ -82,9 +82,13 @@ if (!empty($data)) {
                     <p><?php include('include/detmatrix.php') ?></p>
                 </div>
                 <!--                molecule detail part : Flexible-->
-                <div class="entry">
-                    <p><?php include('include/detFelxi.php') ?></p>
-                </div>
+                <?php if ($type == 'Flexible') {
+                    ?>
+                    <div class="entry">
+                        <p><?php include('include/detFelxi.php') ?></p>
+                    </div>
+                <?php }
+                ?>
                 <!--                molecule Reference part-->
                 <h1 class="title">Download Files</h1>
                 <div class="entry">

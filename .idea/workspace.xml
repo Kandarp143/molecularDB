@@ -33,13 +33,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="moldetail.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moldetail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moldetail.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+              <caret line="86" column="38" lean-forward="false" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
               <folding>
-                <marker date="1516593503363" expanded="true" signature="271:314" ph="select * fro... pm_master" />
+                <marker date="1516593947683" expanded="true" signature="271:314" ph="select * fro... pm_master" />
               </folding>
             </state>
           </provider>
@@ -431,12 +441,12 @@
       <workItem from="1515071504254" duration="295000" />
       <workItem from="1515071924440" duration="511000" />
       <workItem from="1515072768197" duration="3334000" />
-      <workItem from="1516592045032" duration="1452000" />
+      <workItem from="1516592045032" duration="2150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293230000" />
+    <option name="totallyTimeSpent" value="293928000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1000,14 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mollist.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2">
@@ -1035,10 +1037,18 @@
     <entry file="file://$PROJECT_DIR$/moldetail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+          <caret line="86" column="38" lean-forward="false" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
           <folding>
-            <marker date="1516593503363" expanded="true" signature="271:314" ph="select * fro... pm_master" />
+            <marker date="1516593947683" expanded="true" signature="271:314" ph="select * fro... pm_master" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
