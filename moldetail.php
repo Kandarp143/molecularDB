@@ -82,13 +82,9 @@ if (!empty($data)) {
                     <p><?php include('include/detmatrix.php') ?></p>
                 </div>
                 <!--                molecule detail part : Flexible-->
-                <?php if ($type == 'Flexible') {
-                    if ($_SESSION['act'] == 'true') { ?>
-                        <div class="entry" style="border: solid red 2px">
-                            <p><?php include('include/detFelxi.php') ?></p>
-                        </div>
-                    <?php }
-                } ?>
+                <div class="entry">
+                    <p><?php include('include/detFelxi.php') ?></p>
+                </div>
                 <!--                molecule Reference part-->
                 <h1 class="title">Download Files</h1>
                 <div class="entry">

@@ -30,6 +30,10 @@ require_once 'funcation/othFunc.php'; ?>
         .paginate_page {
             margin-left: 10px;
         }
+
+        .ext {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -92,7 +96,12 @@ FROM
                     </td>
                 </tr>
                 <tr>
-                    <th>ID</th>
+                    <th class="ext">MST</th>
+                    <?php if ($_SESSION['act'] == 'true') { ?>
+                        <th>ID<br/>[DB-ID]</th>
+                    <?php } else { ?>
+                        <th>ID</th>
+                    <?php } ?>
                     <th>Substance</th>
                     <th nowrap>CAS-No</th>
                     <th>Name</th>
@@ -110,6 +119,7 @@ FROM
                 </thead>
                 <tfoot>
                 <tr>
+                    <th class="ext">MST</th>
                     <th>ID</th>
                     <th>Substance</th>
                     <th nowrap>CAS-No</th>
@@ -146,10 +156,13 @@ FROM
                         }
                     }
 
+                    //extra first column for save state
+                    echo "<td class='ext'>" . $row['master_id'] . "</td>";
+
                     if ($_SESSION['act'] == 'true') {
-                        echo "<td >" . $row['display_id'] . " [" . $row['display_id'] . "]" . "</td>";
+                        echo "<td>" . $row['display_id'] . " [" . $row['master_id'] . "]" . "</td>";
                     } else {
-                        echo "<td >" . $row['display_id'] . "</td>";
+                        echo "<td>" . $row['display_id'] . "</td>";
                     }
                     $substance = toSubstanceTitle($row['filename']);
                     echo "<td><a onclick='setState()' href='moldetail.php?id=" . $row['master_id'] . "'>"
