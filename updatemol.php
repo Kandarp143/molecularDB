@@ -24,6 +24,8 @@ if (!empty($data)) {
     $user_mode = $data[0]['user_mode'];
     $ls1 = $data[0]['ls1'];
     $ms2 = $data[0]['ms2'];
+    $lam = $data[0]['lam'];
+    $gro = $data[0]['gro'];
 
 }
 ?>

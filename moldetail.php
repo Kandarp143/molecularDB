@@ -19,6 +19,8 @@ if (!empty($data)) {
     $disp_sh = $data[0]['disp_sh'];
     $ms2 = $data[0]['ms2'];
     $ls1 = $data[0]['ls1'];
+    $lam = $data[0]['lam'];
+    $gro = $data[0]['gro'];
 
 }
 ?>

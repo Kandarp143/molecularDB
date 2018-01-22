@@ -156,14 +156,14 @@
             </td>
         </tr>
         <tr>
+            <td></td>
             <td>
                 <i>ms2</i> <input type="checkbox" name="ms2"
                     <?php
                     echo $ms2 == 0 ? '' : 'checked'
                     ?>
                 >
-            </td>
-            <td>
+                <span style="margin-left: 63px"></span>
                 <i>ls1 mardyn</i> <input type="checkbox" name="ls1"
                     <?php
                     echo $ls1 == 0 ? '' : 'checked'
@@ -172,8 +172,19 @@
             </td>
         </tr>
         <tr>
+            <td></td>
             <td>
-
+                <i>lammps</i> <input type="checkbox" name="lam"
+                    <?php
+                    echo $lam == 0 ? '' : 'checked'
+                    ?>
+                >
+                <span style="margin-left: 40px"></span>
+                <i>gromacs</i> <input type="checkbox" name="gro"
+                    <?php
+                    echo $gro == 0 ? '' : 'checked'
+                    ?>
+                >
             </td>
         </tr>
         <tr>

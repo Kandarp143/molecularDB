@@ -141,11 +141,20 @@
             </td>
         </tr>
         <tr>
+            <td></td>
             <td>
                 <i>ms2</i> <input type="checkbox" name="ms2">
-            </td>
-            <td>
+                <span style="margin-left: 63px"></span>
                 <i>ls1 mardyn</i> <input type="checkbox" name="ls1">
+            </td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <i>lammps</i> <input type="checkbox" name="lam">
+                <span style="margin-left: 40px"></span>
+                <i>gromacs</i> <input type="checkbox" name="gro">
             </td>
         </tr>
         <tr>
