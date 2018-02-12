@@ -16,66 +16,7 @@
     <favorites_list name="molecularDB" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="processInsert.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/processInsert.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="84" column="65" lean-forward="false" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
-              <folding>
-                <marker date="1516596310316" expanded="true" signature="3162:3424" ph="INSERT INTO pm_master... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addmst.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/addmst.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="153" column="16" lean-forward="false" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
-              <folding>
-                <marker date="1516596010364" expanded="true" signature="423:459" ph="Select max(m... pm_master" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upheader.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/upheader.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2924">
-              <caret line="172" column="13" lean-forward="false" selection-start-line="157" selection-start-column="7" selection-end-line="172" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="processUpdateHead.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/processUpdateHead.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="63" column="193" lean-forward="false" selection-start-line="63" selection-start-column="190" selection-end-line="63" selection-end-column="193" />
-              <folding>
-                <marker date="1516595037294" expanded="true" signature="2197:2409" ph="UPDATE pm_master... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="moldetail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moldetail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-              <folding>
-                <marker date="1516594309486" expanded="true" signature="271:314" ph="select * fro... pm_master" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,7 +28,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$dihedral</find>
       <find>style='border: solid 1px red'</find>
       <find>87.9092</find>
       <find>between site {#2 – #3 – #4}</find>
@@ -117,6 +57,7 @@
       <find>Object</find>
       <find>red</find>
       <find>$ls1</find>
+      <find>$pdo</find>
     </findStrings>
     <replaceStrings>
       <replace>$zipName</replace>
@@ -182,7 +123,6 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/list.js" />
         <option value="$PROJECT_DIR$/funcation/fileFunc.php" />
-        <option value="$PROJECT_DIR$/mollist.php" />
         <option value="$PROJECT_DIR$/moldetail.php" />
         <option value="$PROJECT_DIR$/include/detDown.php" />
         <option value="$PROJECT_DIR$/include/upheader.php" />
@@ -190,6 +130,7 @@
         <option value="$PROJECT_DIR$/processUpdateHead.php" />
         <option value="$PROJECT_DIR$/include/addmst.php" />
         <option value="$PROJECT_DIR$/processInsert.php" />
+        <option value="$PROJECT_DIR$/mollist.php" />
       </list>
     </option>
   </component>
@@ -231,7 +172,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,7 +184,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -462,12 +403,14 @@
       <workItem from="1515071924440" duration="511000" />
       <workItem from="1515072768197" duration="3334000" />
       <workItem from="1516592045032" duration="3684000" />
-      <workItem from="1516595877368" duration="435000" />
+      <workItem from="1516595877368" duration="903000" />
+      <workItem from="1517998750964" duration="2450000" />
+      <workItem from="1518459905061" duration="640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295897000" />
+    <option name="totallyTimeSpent" value="299455000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -480,10 +423,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2579425" sideWeight="0.7463175" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2655068" sideWeight="0.7463175" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -501,7 +443,7 @@
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28805238" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -612,7 +554,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/doc/3.admin-scenario.txt" />
     <entry file="file://$PROJECT_DIR$/include/norm4.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-26">
@@ -681,13 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
           <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processDelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -977,16 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3261">
-          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-          <folding>
-            <marker date="1512728238686" expanded="true" signature="2825:2865" ph="SELECT ${$co... ${$table}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/detFelxi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-318">
@@ -994,13 +918,6 @@
           <folding>
             <element signature="n#style#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mollist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1015,9 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <marker date="1516594309486" expanded="true" signature="271:314" ph="select * fro... pm_master" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,17 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/addmst.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="153" column="16" lean-forward="false" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
-          <folding>
-            <marker date="1516596010364" expanded="true" signature="423:459" ph="Select max(m... pm_master" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1064,26 +967,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2924">
           <caret line="172" column="13" lean-forward="false" selection-start-line="157" selection-start-column="7" selection-end-line="172" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/processUpdateHead.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="1071">
           <caret line="63" column="193" lean-forward="false" selection-start-line="63" selection-start-column="190" selection-end-line="63" selection-end-column="193" />
-          <folding>
-            <marker date="1516595037294" expanded="true" signature="2197:2409" ph="UPDATE pm_master... " />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/addmst.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="153" column="16" lean-forward="false" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/processInsert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
+        <state relative-caret-position="17">
           <caret line="84" column="65" lean-forward="false" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mollist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="144" column="102" lean-forward="false" selection-start-line="144" selection-start-column="102" selection-end-line="144" selection-end-column="102" />
           <folding>
-            <marker date="1516596310316" expanded="true" signature="3162:3424" ph="INSERT INTO pm_master... " />
+            <marker date="1518001729741" expanded="true" signature="1328:1950" ph="SELECT maste... pm_master" />
+            <marker date="1518001729741" expanded="true" signature="1986:2628" ph="SELECT maste... pm_master" />
+            <marker date="1518001729741" expanded="true" signature="4969:5001" ph="..." />
+            <marker date="1518001729741" expanded="true" signature="5084:5101" ph="..." />
+            <marker date="1518001729741" expanded="true" signature="5273:5323" ph="..." />
+            <marker date="1518001729741" expanded="true" signature="5406:5441" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="113" column="22" lean-forward="false" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+          <folding>
+            <marker date="1512728238686" expanded="true" signature="2825:2865" ph="SELECT ${$co... ${$table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processUpRef.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1512728239201" expanded="true" signature="1552:1589" ph="DELETE FROM pm_bib... " />
+            <marker date="1512728239201" expanded="true" signature="1705:1784" ph="INSERT INTO pm_bib... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processDelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <marker date="1512728238967" expanded="true" signature="1019:1061" ph="DELETE FROM pm_master... " />
+            <marker date="1512728238967" expanded="true" signature="1105:1147" ph="DELETE FROM pm_detail... " />
+            <marker date="1512728238967" expanded="true" signature="1191:1235" ph="DELETE FROM pm_flexible... " />
+            <marker date="1512728238967" expanded="true" signature="1820:1856" ph="SELECT max(m... pm_master" />
+            <marker date="1512728238967" expanded="true" signature="1966:2003" ph="ALTER TABLE pm_master... " />
           </folding>
         </state>
       </provider>

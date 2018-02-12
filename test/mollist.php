@@ -58,7 +58,7 @@ require_once 'funcation/othFunc.php'; ?>
     IF(charge = 0, '', IF(charge = 1, CONCAT(charge,' Charge'), CONCAT(charge,' Charges'))) as charge,
     IF(quadrupole = 0,'',IF(quadrupole = 1, CONCAT(quadrupole,' Quadrupole'), CONCAT(quadrupole,' Quadrupoles'))) as quadrupole,
     memory_loc,
-	bibtex_ref_key,
+	bibtex_key,
     disp_sh,
     name,
     type
@@ -77,7 +77,7 @@ FROM
     IF(charge = 0, '', IF(charge = 1, CONCAT(charge,' Charge'), CONCAT(charge,' Charges'))) as charge,
     IF(quadrupole = 0,'',IF(quadrupole = 1, CONCAT(quadrupole,' Quadrupole'), CONCAT(quadrupole,' Quadrupoles'))) as quadrupole,
     memory_loc,
-	bibtex_ref_key,
+	bibtex_key,
     disp_sh,
     name,
     type
@@ -141,8 +141,6 @@ FROM
                 <!-- table print-->
                 <?php
                 foreach ($pdo->query($tbl_sql) as $row) {
-                    $db = new Database();
-                    $bib = $db->selectValue('bib_title', 'pm_bib', 'bib_key', $row['bibtex_ref_key']);
                     if ($_SESSION['act'] == 'true') {
                         if (isSubstanceIonic($row['filename'])) {
                             echo "<tr style='text-align: left;color: #008CBA;'>";
@@ -176,7 +174,7 @@ FROM
                     echo "<td >" . $row['charge'] . "</td>";
                     echo "<td >" . $row['dipole'] . "</td>";
                     echo "<td >" . $row['quadrupole'] . "</td>";
-                    echo "<td nowrap> [" . $bib . "] </tdnowrap>";
+                    echo "<td nowrap> [" . $row['bibtex_key'] . "] </tdnowrap>";
                     echo "<td>" . $row['type'] . "</td>";
                     if ($_SESSION['act'] == 'true') {
                         echo '<td><a class="a-success"  href="updatemol.php?id=' . $row['master_id'] . '">Update</a><br/>';
