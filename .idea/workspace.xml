@@ -16,7 +16,58 @@
     <favorites_list name="molecularDB" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="generateFile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/generateFile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fileFunc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/funcation/fileFunc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="652" column="74" lean-forward="false" selection-start-line="652" selection-start-column="74" selection-end-line="652" selection-end-column="74" />
+              <folding>
+                <element signature="n#getExt#0;n#!!top" expanded="false" />
+                <element signature="n#validateSize#0;n#!!top" expanded="false" />
+                <element signature="n#clearDirectory#0;n#!!top" expanded="false" />
+                <element signature="n#parsePMFile#0;n#!!top" expanded="false" />
+                <element signature="n#parsePMArray#0;n#!!top" expanded="false" />
+                <element signature="n#uploadFile#0;n#!!top" expanded="false" />
+                <element signature="n#processMolDetail#0;n#!!top" expanded="false" />
+                <element signature="n#printPMData#0;n#!!top" expanded="false" />
+                <element signature="e#7874#10294#0#PHP" expanded="false" />
+                <element signature="n#genPMFile#0;n#!!top" expanded="false" />
+                <element signature="n#genLsFile#0;n#!!top" expanded="false" />
+                <element signature="e#15182#15407#0#PHP" expanded="false" />
+                <element signature="e#16236#16985#0#PHP" expanded="false" />
+                <element signature="n#genGROffitpFile#0;n#!!top" expanded="false" />
+                <element signature="n#genGROatpFile#0;n#!!top" expanded="false" />
+                <element signature="n#genGROpdbFile#0;n#!!top" expanded="false" />
+                <element signature="n#printGROpdbData#0;n#!!top" expanded="false" />
+                <marker date="1518528899000" expanded="true" signature="3453:3494" ph="DELETE FROM pm_detail... " />
+                <marker date="1518528899000" expanded="true" signature="4315:4393" ph="INSERT INTO pm_detail... " />
+                <marker date="1518528899000" expanded="true" signature="5445:5535" ph="INSERT INTO pm_flexible... " />
+                <marker date="1518528899000" expanded="true" signature="5838:5928" ph="INSERT INTO pm_flexible... " />
+                <marker date="1518528899000" expanded="true" signature="6394:6438" ph="select type pm_master" />
+                <marker date="1518528899000" expanded="true" signature="6550:6674" ph="SELECT COUNT... site_type" />
+                <marker date="1518528899000" expanded="true" signature="6606:6671" ph="SELECT DISTI... pm_detail" />
+                <marker date="1518528899000" expanded="true" signature="6808:6949" ph="SELECT COUNT... site_type" />
+                <marker date="1518528899000" expanded="true" signature="6853:6926" ph="SELECT DISTI... pm_detail" />
+                <marker date="1518528899000" expanded="true" signature="7146:7188" ph="SELECT * FRO... pm_detail" />
+                <marker date="1518528899000" expanded="true" signature="7939:7983" ph="SELECT * FRO... pm_flexible" />
+                <marker date="1518528899000" expanded="true" signature="10846:10888" ph="SELECT * FRO... pm_detail" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -28,10 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>style='border: solid 1px red'</find>
-      <find>87.9092</find>
-      <find>between site {#2 – #3 – #4}</find>
-      <find>$disp_sh</find>
       <find>$point</find>
       <find>$count</find>
       <find>$result</find>
@@ -58,6 +105,10 @@
       <find>red</find>
       <find>$ls1</find>
       <find>$pdo</find>
+      <find>tyle</find>
+      <find>'type'</find>
+      <find>$types</find>
+      <find>$MASS</find>
     </findStrings>
     <replaceStrings>
       <replace>$zipName</replace>
@@ -122,7 +173,6 @@
         <option value="$PROJECT_DIR$/include/generateFile.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/list.js" />
-        <option value="$PROJECT_DIR$/funcation/fileFunc.php" />
         <option value="$PROJECT_DIR$/moldetail.php" />
         <option value="$PROJECT_DIR$/include/detDown.php" />
         <option value="$PROJECT_DIR$/include/upheader.php" />
@@ -131,6 +181,7 @@
         <option value="$PROJECT_DIR$/include/addmst.php" />
         <option value="$PROJECT_DIR$/processInsert.php" />
         <option value="$PROJECT_DIR$/mollist.php" />
+        <option value="$PROJECT_DIR$/funcation/fileFunc.php" />
       </list>
     </option>
   </component>
@@ -172,6 +223,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -180,11 +232,15 @@
               <item name="molecularDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="molecularDB" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="molecularDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="molecularDB" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="include" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,18 +256,18 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\molecularDB\img" />
-      <recent name="C:\xampp\htdocs\moleculeDB" />
-      <recent name="C:\xampp\htdocs\moleculeDB\js" />
-      <recent name="C:\xampp\htdocs\moleculeDB\funcation" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\molecularDB" />
       <recent name="C:\xampp\htdocs\molecularDB\class" />
       <recent name="C:\xampp\htdocs\molecularDB\" />
       <recent name="C:\xampp\htdocs\molecularDB\c" />
       <recent name="C:\xampp\htdocs\molecularDB\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\molecularDB\img" />
+      <recent name="C:\xampp\htdocs\moleculeDB" />
+      <recent name="C:\xampp\htdocs\moleculeDB\js" />
+      <recent name="C:\xampp\htdocs\moleculeDB\funcation" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -405,12 +461,13 @@
       <workItem from="1516592045032" duration="3684000" />
       <workItem from="1516595877368" duration="903000" />
       <workItem from="1517998750964" duration="2450000" />
-      <workItem from="1518459905061" duration="640000" />
+      <workItem from="1518459905061" duration="2472000" />
+      <workItem from="1518527391227" duration="1511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299455000" />
+    <option name="totallyTimeSpent" value="302798000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -425,7 +482,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2655068" sideWeight="0.7463175" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26928896" sideWeight="0.7463175" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -855,55 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funcation/fileFunc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="565" column="46" lean-forward="false" selection-start-line="565" selection-start-column="46" selection-end-line="565" selection-end-column="46" />
-          <folding>
-            <element signature="n#getExt#0;n#!!top" expanded="false" />
-            <element signature="n#validateSize#0;n#!!top" expanded="false" />
-            <element signature="n#clearDirectory#0;n#!!top" expanded="false" />
-            <element signature="n#parsePMFile#0;n#!!top" expanded="false" />
-            <element signature="n#parsePMArray#0;n#!!top" expanded="false" />
-            <element signature="n#uploadFile#0;n#!!top" expanded="false" />
-            <element signature="n#processMolDetail#0;n#!!top" expanded="false" />
-            <element signature="n#printPMData#0;n#!!top" expanded="false" />
-            <element signature="e#7874#10294#0#PHP" expanded="false" />
-            <element signature="n#genPMFile#0;n#!!top" expanded="false" />
-            <element signature="n#genLsFile#0;n#!!top" expanded="false" />
-            <element signature="e#15182#15407#0#PHP" expanded="false" />
-            <element signature="e#16236#16985#0#PHP" expanded="false" />
-            <element signature="e#17704#17764#0#PHP" expanded="false" />
-            <element signature="e#17802#18191#0#PHP" expanded="false" />
-            <element signature="n#printLAMmolData#0;n#!!top" expanded="false" />
-            <element signature="n#genLAMintFile#0;n#!!top" expanded="false" />
-            <element signature="n#printLAMintData#0;n#!!top" expanded="false" />
-            <element signature="n#genGROatpFile#0;n#!!top" expanded="false" />
-            <element signature="n#genGROpdbFile#0;n#!!top" expanded="false" />
-            <element signature="n#printGROpdbData#0;n#!!top" expanded="false" />
-            <marker date="1514367629605" expanded="true" signature="3453:3494" ph="DELETE FROM pm_detail... " />
-            <marker date="1514367629605" expanded="true" signature="4315:4393" ph="INSERT INTO pm_detail... " />
-            <marker date="1514367629605" expanded="true" signature="5445:5535" ph="INSERT INTO pm_flexible... " />
-            <marker date="1514367629605" expanded="true" signature="5838:5928" ph="INSERT INTO pm_flexible... " />
-            <marker date="1514367629605" expanded="true" signature="6394:6438" ph="select type pm_master" />
-            <marker date="1514367629605" expanded="true" signature="6550:6674" ph="SELECT COUNT... site_type" />
-            <marker date="1514367629605" expanded="true" signature="6606:6671" ph="SELECT DISTI... pm_detail" />
-            <marker date="1514367629605" expanded="true" signature="6808:6949" ph="SELECT COUNT... site_type" />
-            <marker date="1514367629605" expanded="true" signature="6853:6926" ph="SELECT DISTI... pm_detail" />
-            <marker date="1514367629605" expanded="true" signature="7146:7188" ph="SELECT * FRO... pm_detail" />
-            <marker date="1514367629605" expanded="true" signature="7939:7983" ph="SELECT * FRO... pm_flexible" />
-            <marker date="1514367629605" expanded="true" signature="10846:10888" ph="SELECT * FRO... pm_detail" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/generateFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="56" column="15" lean-forward="false" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
@@ -949,13 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/detDown.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/updet.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -995,14 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="144" column="102" lean-forward="false" selection-start-line="144" selection-start-column="102" selection-end-line="144" selection-end-column="102" />
-          <folding>
-            <marker date="1518001729741" expanded="true" signature="1328:1950" ph="SELECT maste... pm_master" />
-            <marker date="1518001729741" expanded="true" signature="1986:2628" ph="SELECT maste... pm_master" />
-            <marker date="1518001729741" expanded="true" signature="4969:5001" ph="..." />
-            <marker date="1518001729741" expanded="true" signature="5084:5101" ph="..." />
-            <marker date="1518001729741" expanded="true" signature="5273:5323" ph="..." />
-            <marker date="1518001729741" expanded="true" signature="5406:5441" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1020,10 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1512728239201" expanded="true" signature="1552:1589" ph="DELETE FROM pm_bib... " />
-            <marker date="1512728239201" expanded="true" signature="1705:1784" ph="INSERT INTO pm_bib... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1031,12 +1020,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/detDown.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/generateFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funcation/fileFunc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="652" column="74" lean-forward="false" selection-start-line="652" selection-start-column="74" selection-end-line="652" selection-end-column="74" />
           <folding>
-            <marker date="1512728238967" expanded="true" signature="1019:1061" ph="DELETE FROM pm_master... " />
-            <marker date="1512728238967" expanded="true" signature="1105:1147" ph="DELETE FROM pm_detail... " />
-            <marker date="1512728238967" expanded="true" signature="1191:1235" ph="DELETE FROM pm_flexible... " />
-            <marker date="1512728238967" expanded="true" signature="1820:1856" ph="SELECT max(m... pm_master" />
-            <marker date="1512728238967" expanded="true" signature="1966:2003" ph="ALTER TABLE pm_master... " />
+            <element signature="n#getExt#0;n#!!top" expanded="false" />
+            <element signature="n#validateSize#0;n#!!top" expanded="false" />
+            <element signature="n#clearDirectory#0;n#!!top" expanded="false" />
+            <element signature="n#parsePMFile#0;n#!!top" expanded="false" />
+            <element signature="n#parsePMArray#0;n#!!top" expanded="false" />
+            <element signature="n#uploadFile#0;n#!!top" expanded="false" />
+            <element signature="n#processMolDetail#0;n#!!top" expanded="false" />
+            <element signature="n#printPMData#0;n#!!top" expanded="false" />
+            <element signature="e#7874#10294#0#PHP" expanded="false" />
+            <element signature="n#genPMFile#0;n#!!top" expanded="false" />
+            <element signature="n#genLsFile#0;n#!!top" expanded="false" />
+            <element signature="e#15182#15407#0#PHP" expanded="false" />
+            <element signature="e#16236#16985#0#PHP" expanded="false" />
+            <element signature="n#genGROffitpFile#0;n#!!top" expanded="false" />
+            <element signature="n#genGROatpFile#0;n#!!top" expanded="false" />
+            <element signature="n#genGROpdbFile#0;n#!!top" expanded="false" />
+            <element signature="n#printGROpdbData#0;n#!!top" expanded="false" />
+            <marker date="1518528899000" expanded="true" signature="3453:3494" ph="DELETE FROM pm_detail... " />
+            <marker date="1518528899000" expanded="true" signature="4315:4393" ph="INSERT INTO pm_detail... " />
+            <marker date="1518528899000" expanded="true" signature="5445:5535" ph="INSERT INTO pm_flexible... " />
+            <marker date="1518528899000" expanded="true" signature="5838:5928" ph="INSERT INTO pm_flexible... " />
+            <marker date="1518528899000" expanded="true" signature="6394:6438" ph="select type pm_master" />
+            <marker date="1518528899000" expanded="true" signature="6550:6674" ph="SELECT COUNT... site_type" />
+            <marker date="1518528899000" expanded="true" signature="6606:6671" ph="SELECT DISTI... pm_detail" />
+            <marker date="1518528899000" expanded="true" signature="6808:6949" ph="SELECT COUNT... site_type" />
+            <marker date="1518528899000" expanded="true" signature="6853:6926" ph="SELECT DISTI... pm_detail" />
+            <marker date="1518528899000" expanded="true" signature="7146:7188" ph="SELECT * FRO... pm_detail" />
+            <marker date="1518528899000" expanded="true" signature="7939:7983" ph="SELECT * FRO... pm_flexible" />
+            <marker date="1518528899000" expanded="true" signature="10846:10888" ph="SELECT * FRO... pm_detail" />
           </folding>
         </state>
       </provider>

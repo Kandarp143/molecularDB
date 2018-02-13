@@ -631,9 +631,9 @@ function printLAMintData($lam, $masterId)
     foreach ($types as $key => $val) {
         print "pair_coeff      ";
         if ($lam['EPS'][$key] == 0 && $lam['SIG'][$key] == 0) {
-            print $val . "  " . "*" . " lj/cut/dipole/cut  0.0  0.0 \n";
+            print $val . "  " . "*" . " 0.0  0.0 \n";
         } else {
-            print $val . "  " . $val . " lj/cut/dipole/cut  " . $lam['EPS'][$key] . "  " . $lam['SIG'][$key] . "\n";
+            print $val . "  " . $val . " " . $lam['EPS'][$key] . "  " . $lam['SIG'][$key] . "\n";
         }
 
 
@@ -650,7 +650,7 @@ function printLAMintData($lam, $masterId)
     //printing mass
 
     foreach ($lam['MASS'] as $key => $val) {
-        print "mass " . $key . " " . $val . " \n";
+        print "mass " . $key . " " . $lam['MASS'][$lam['types'][$key]] . " \n";
     }
 }
 
