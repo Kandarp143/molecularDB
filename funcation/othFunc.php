@@ -854,7 +854,7 @@ function removeQuad($molecule)
             $oth['Site'] = sizeof($molecule['ch']) + 1;
             $oth['SiteName'] = $q->getName() . '[e_1]';
             $oth['Mass'] = $q->getOth()['Mass'] / 3;
-            $oth['Charge'] = (-0.2082 * $q->getOth()['Quadrupole']) / (2 * pow($a, 2));
+            $oth['Charge'] = (0.2082 * $q->getOth()['Quadrupole']) / (2 * pow($a, 2));
             $oth['Shielding'] = 1;
             $c1->setOth($oth);
             array_push($molecule['ch'], $c1);
@@ -870,7 +870,7 @@ function removeQuad($molecule)
             $oth['Site'] = sizeof($molecule['ch']) + 1;
             $oth['SiteName'] = $q->getName() . '[e_2]';
             $oth['Mass'] = $q->getOth()['Mass'] / 3;
-            $oth['Charge'] = (0.2082 * $q->getOth()['Quadrupole']) / (2 * pow($a, 2));
+            $oth['Charge'] = (-0.2082 * $q->getOth()['Quadrupole']) / pow($a, 2);
             $oth['Shielding'] = 1;
             $c2->setOth($oth);
             array_push($molecule['ch'], $c2);
@@ -886,7 +886,7 @@ function removeQuad($molecule)
             $oth['Site'] = sizeof($molecule['ch']) + 1;
             $oth['SiteName'] = $q->getName() . '[e_3]';
             $oth['Mass'] = $q->getOth()['Mass'] / 3;
-            $oth['Charge'] = (-0.2082 * $q->getOth()['Quadrupole']) / (2 * pow($a, 2));
+            $oth['Charge'] = (0.2082 * $q->getOth()['Quadrupole']) / (2 * pow($a, 2));
             $oth['Shielding'] = 1;
             $c3->setOth($oth);
             array_push($molecule['ch'], $c3);

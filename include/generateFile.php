@@ -26,14 +26,17 @@ if ($typ === 'ms2') {
 } elseif ($typ === 'lam') {
     $type = 'application/zip';
     $filePath = '../' . rootGenLAM;
+
     /* file require fields */
     $dirName = $fileName . date("Ymdhis");
     mkdir($filePath . $dirName . "/");
     $filePath = $filePath . $dirName . "/";
     $zipName = $filePath . $fileName . '.zip';
+
     /* generate actual files */
     $lam = genLAMmolFile($id, $filePath, $fileName . '.molecule');
     genLAMintFile($id, $filePath, $fileName . '.int', $lam);
+
     /* archive (zip) generated files into dir */
     $za = new archiveMake();
     $res = $za->open($zipName, ZipArchive::CREATE);

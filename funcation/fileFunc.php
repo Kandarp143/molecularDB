@@ -401,6 +401,7 @@ function genLsFile($masterId, $filePath, $fileName)
 /* ------------------------------------------------------------------------------------------------- LAMPPS (MOL)-----*/
 function genLAMmolFile($masterId, $filePath, $fileName)
 {
+    /*this method will generate all arrays for lampps*/
 
 
     //declaring output
@@ -415,11 +416,12 @@ function genLAMmolFile($masterId, $filePath, $fileName)
 
     //getting require data
     $points = getMolecule($masterId);
+    //prepare array for file
     if ($fileName == 'gro') {
-        //if this array will use in gromacs
-        $molecule = removeQuad(removeDipole(splitMolSiteWise(getMolecule($masterId))));
+        //if this array will use in gromacs - convert quad and dipole
+        $molecule = removeQuad(removeDipole(splitMolSiteWise($points)));
     } else {
-        //if this array only for lamps
+        //if this array only for lamps- convert quad
         $molecule = removeQuad(splitMolSiteWise($points));
     }
     $pmatrix = splitPmatrixSiteWise(makeZmatrix($points, 0)['pmatrix']);
@@ -481,9 +483,10 @@ function genLAMmolFile($masterId, $filePath, $fileName)
         }
     }
 
-    /*********************************************** TYPES ***********************/
-    //SIG and EPS
+
+    /***************************************** DCLARING M  ***********************/
     $m = sizeof($coords);
+    //extra tune and fine
     for ($i = 0; $i <= $m; $i++) {
         //update dimenison
         if (!array_key_exists($i, $CHAR))
@@ -497,12 +500,18 @@ function genLAMmolFile($masterId, $filePath, $fileName)
     //sorting all
     ksort($CHAR);
     ksort($DIP);
-    ksort($SIG);
-    ksort($EPS);
+
+
+    /*********************************************** TYPES ***********************/
+
+
+    //SIG and EPS
     foreach ($pmatrix['lj'] as $p) {
         $SIG[$p['Site']] = $p['Sigma'];
         $EPS[$p['Site']] = $p['Epsilon'] * 0.0000861733035;
     }
+    ksort($SIG);
+    ksort($EPS);
 
     //TYPE array column wise (column1 = key , column2 = value;)
     // column1
@@ -523,7 +532,18 @@ function genLAMmolFile($masterId, $filePath, $fileName)
             $types[$i] = $types[$i - 1] + 1;
         }
     }
-
+    //removing duplicates from types
+    end($types);         // move the internal pointer to the end of the array
+    $lastKey = key($types);
+    $tmpTypes = $types;
+    for ($i = 1; $i <= $lastKey; $i++) {
+        for ($j = 1; $j < $i; $j++) {
+            if (array_key_exists($i, $tmpTypes) && array_key_exists($j, $tmpTypes))
+                if ($tmpTypes[$i] == $tmpTypes[$j])
+                    if (array_key_exists($i, $types))
+                        unset($types[$i]);
+        }
+    }
 
     //mass
     //declaring mass
@@ -623,7 +643,7 @@ function printLAMintData($lam, $masterId)
 
     print "# Set interaction parameters between particles \n\n";
 
-    print "pair_style         lj/cut/dipole/cut $$ \n";
+    print "pair_style         lj/long/dipole/long off off $$ \n";
     print "pair_modify        mix arithmetic \n\n";
 
 
@@ -643,6 +663,13 @@ function printLAMintData($lam, $masterId)
     foreach ($types as $key => $val) {
         if ($lam['CHAR'][$key] != 0) {
             print "set type  " . $val . " charge  " . $lam['CHAR'][$key] . " \n";
+        }
+    }
+
+    print "\n\n#dipole\n";
+    foreach ($types as $key => $val) {
+        if ($lam['DIP'][$key] != 0) {
+            print "set type  " . $val . " dipole  " . $lam['DIP'][$key] . " \n";
         }
     }
 
