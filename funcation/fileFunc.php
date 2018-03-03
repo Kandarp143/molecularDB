@@ -410,6 +410,7 @@ function genLAMmolFile($masterId, $filePath, $fileName)
     //supporting array
     $CHAR[0] = 0;
     $DIP[0] = 0;
+    $DIPMAP = null;
     $SIG = null;
     $EPS = null;
     $MASS = null;
@@ -465,6 +466,7 @@ function genLAMmolFile($masterId, $filePath, $fileName)
         foreach ($coords as $co) {
             if ($d->getX() == $co['x'] && $d->getY() == $co['y'] && $d->getZ() == $co['z']) {
                 $DIP[$co['id']] = $d->getOth()['Dipole'];
+                $DIPMAP[$co['id']] = $d->getOth();
                 $isSame = true;
             }
         }
@@ -480,6 +482,7 @@ function genLAMmolFile($masterId, $filePath, $fileName)
             array_push($coords, $tmp);
             //add to char
             $DIP[$id] = $d->getOth()['Dipole'];
+            $DIPMAP[$id] = $d->getOth();
         }
     }
 
@@ -532,16 +535,16 @@ function genLAMmolFile($masterId, $filePath, $fileName)
             $types[$i] = $types[$i - 1] + 1;
         }
     }
-    //removing duplicates from types
+//    removing duplicates from types
     end($types);         // move the internal pointer to the end of the array
     $lastKey = key($types);
     $tmpTypes = $types;
     for ($i = 1; $i <= $lastKey; $i++) {
         for ($j = 1; $j < $i; $j++) {
-            if (array_key_exists($i, $tmpTypes) && array_key_exists($j, $tmpTypes))
-                if ($tmpTypes[$i] == $tmpTypes[$j])
-                    if (array_key_exists($i, $types))
-                        unset($types[$i]);
+            if (array_key_exists($i, $types) && array_key_exists($j, $types))
+                if ($types[$i] == $types[$j])
+                    if (array_key_exists($i, $tmpTypes))
+                        unset($tmpTypes[$i]);
         }
     }
 
@@ -576,8 +579,10 @@ function genLAMmolFile($masterId, $filePath, $fileName)
     $LAMmolData['name'] = strtok($fileName, '.');
     $LAMmolData['coords'] = $coords;
     $LAMmolData['types'] = $types;
+    $LAMmolData['tmpTypes'] = $tmpTypes;
     $LAMmolData['CHAR'] = $CHAR;
     $LAMmolData['DIP'] = $DIP;
+    $LAMmolData['DIPMAP'] = $DIPMAP;
     $LAMmolData['SIG'] = $SIG;
     $LAMmolData['EPS'] = $EPS;
     $LAMmolData['MASS'] = $MASS;
@@ -638,8 +643,8 @@ function genLAMintFile($masterId, $filePath, $fileName, $LAMmolData)
 
 function printLAMintData($lam, $masterId)
 {
-    //modify type array - remove duplicate
-    $types = array_unique($lam['types']);
+    //get modified types with remove duplicates
+    $types = $lam['tmpTypes'];
 
     print "# Set interaction parameters between particles \n\n";
 
@@ -659,25 +664,42 @@ function printLAMintData($lam, $masterId)
 
     }
 
-    print "\n\n#charge\n";
+    $isCharge = false;
+    $isDipole = false;
+    //check weather going ti display or not
+    foreach ($types as $key => $val) {
+        if ($lam['CHAR'][$key] != 0)
+            $isCharge = true;
+        if ($lam['DIP'][$key] != 0)
+            $isDipole = true;
+    }
+
+    if ($isCharge) print "\n\n#charge\n";
     foreach ($types as $key => $val) {
         if ($lam['CHAR'][$key] != 0) {
             print "set type  " . $val . " charge  " . $lam['CHAR'][$key] . " \n";
         }
     }
 
-    print "\n\n#dipole\n";
+    if ($isDipole) print "\n\n#dipole\n";
     foreach ($types as $key => $val) {
         if ($lam['DIP'][$key] != 0) {
-            print "set type  " . $val . " dipole  " . $lam['DIP'][$key] . " \n";
+            print "set type  " . $val . " dipole  " .
+                $lam['DIP'][$key] * sin($lam['DIPMAP'][$key]['Theta']) * cos($lam['DIPMAP'][$key]['Phi']) . "  " .
+                $lam['DIP'][$key] * sin($lam['DIPMAP'][$key]['Theta']) * sin($lam['DIPMAP'][$key]['Phi']) . "  " .
+                $lam['DIP'][$key] * cos($lam['DIPMAP'][$key]['Theta']) . " \n";
         }
     }
 
     print "\n\n#mass\n";
     //printing mass
 
-    foreach ($lam['MASS'] as $key => $val) {
-        print "mass " . $key . " " . $lam['MASS'][$lam['types'][$key]] . " \n";
+//    foreach ($lam['MASS'] as $key => $val) {
+//        print "mass " . $key . " " . $val . " \n";
+//    }
+
+    foreach ($lam['tmpTypes'] as $key => $val) {
+        print "mass " . $val . " " . $lam['MASS'][$key] . " \n";
     }
 }
 

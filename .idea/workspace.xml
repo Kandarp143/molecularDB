@@ -16,152 +16,7 @@
     <favorites_list name="molecularDB" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="othFunc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/funcation/othFunc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="317" column="23" lean-forward="false" selection-start-line="317" selection-start-column="19" selection-end-line="317" selection-end-column="23" />
-              <folding>
-                <element signature="n#toSubstanceTitle#0;n#!!top" expanded="false" />
-                <element signature="e#188#222#0#PHP" expanded="false" />
-                <element signature="e#688#970#0#PHP" expanded="false" />
-                <element signature="e#1004#1305#0#PHP" expanded="false" />
-                <element signature="e#1351#1637#0#PHP" expanded="false" />
-                <element signature="n#isSubstanceIonic#0;n#!!top" expanded="false" />
-                <element signature="n#toFormatSiteType#0;n#!!top" expanded="false" />
-                <element signature="e#2207#2337#0#PHP" expanded="false" />
-                <element signature="e#2284#2337#0#PHP" expanded="false" />
-                <element signature="n#referenceMessage#0;n#!!top" expanded="false" />
-                <element signature="e#2498#2719#0#PHP" expanded="false" />
-                <element signature="n#referenceMessageMsg#0;n#!!top" expanded="false" />
-                <element signature="e#2989#4759#0#PHP" expanded="false" />
-                <element signature="e#3018#3921#0#PHP" expanded="false" />
-                <element signature="e#3056#3873#0#PHP" expanded="false" />
-                <element signature="e#3149#3873#0#PHP" expanded="false" />
-                <element signature="e#3244#3873#0#PHP" expanded="false" />
-                <element signature="e#3337#3873#0#PHP" expanded="false" />
-                <element signature="e#3430#3873#0#PHP" expanded="false" />
-                <element signature="e#3521#3873#0#PHP" expanded="false" />
-                <element signature="e#3610#3873#0#PHP" expanded="false" />
-                <element signature="e#4708#4759#0#PHP" expanded="false" />
-                <element signature="n#formatAuthor#0;n#!!top" expanded="false" />
-                <element signature="e#5280#5550#0#PHP" expanded="false" />
-                <element signature="e#5312#5491#0#PHP" expanded="false" />
-                <element signature="e#5411#5491#0#PHP" expanded="false" />
-                <element signature="n#referenceParameter#0;n#!!top" expanded="false" />
-                <element signature="e#5639#6213#0#PHP" expanded="false" />
-                <element signature="e#5668#5962#0#PHP" expanded="false" />
-                <element signature="e#5706#5952#0#PHP" expanded="false" />
-                <element signature="e#5821#5952#0#PHP" expanded="false" />
-                <element signature="e#5844#5938#0#PHP" expanded="false" />
-                <element signature="e#5997#6154#0#PHP" expanded="false" />
-                <element signature="e#6113#6154#0#PHP" expanded="false" />
-                <element signature="e#6162#6213#0#PHP" expanded="false" />
-                <element signature="n#referenceMessageKey#0;n#!!top" expanded="false" />
-                <element signature="n#referenceList#0;n#!!top" expanded="false" />
-                <element signature="e#6496#6650#0#PHP" expanded="false" />
-                <element signature="e#6764#7110#0#PHP" expanded="false" />
-                <element signature="e#6810#6963#0#PHP" expanded="false" />
-                <element signature="e#7004#7104#0#PHP" expanded="false" />
-                <element signature="e#8033#8156#0#PHP" expanded="false" />
-                <element signature="e#8165#8289#0#PHP" expanded="false" />
-                <element signature="e#8298#8905#0#PHP" expanded="false" />
-                <element signature="e#8552#8825#0#PHP" expanded="false" />
-                <element signature="e#8995#10402#0#PHP" expanded="false" />
-                <element signature="e#10477#12917#0#PHP" expanded="false" />
-                <element signature="e#10819#10876#0#PHP" expanded="false" />
-                <element signature="e#10889#10981#0#PHP" expanded="false" />
-                <element signature="e#10994#11726#0#PHP" expanded="false" />
-                <element signature="e#11224#11638#0#PHP" expanded="false" />
-                <element signature="e#11768#12906#0#PHP" expanded="false" />
-                <element signature="e#11805#12905#0#PHP" expanded="false" />
-                <element signature="e#12947#13344#0#PHP" expanded="false" />
-                <element signature="e#13042#13136#0#PHP" expanded="false" />
-                <element signature="e#13149#13247#0#PHP" expanded="false" />
-                <element signature="e#13405#13880#0#PHP" expanded="false" />
-                <element signature="e#13610#13750#0#PHP" expanded="false" />
-                <element signature="e#13759#13874#0#PHP" expanded="false" />
-                <element signature="e#13964#14174#0#PHP" expanded="false" />
-                <element signature="e#14078#14139#0#PHP" expanded="false" />
-                <element signature="e#14199#14415#0#PHP" expanded="false" />
-                <element signature="e#14317#14379#0#PHP" expanded="false" />
-                <element signature="n#makeFlexArray#0;n#!!top" expanded="false" />
-                <element signature="e#15233#18410#0#PHP" expanded="false" />
-                <element signature="e#15269#16679#0#PHP" expanded="false" />
-                <element signature="e#15350#16212#0#PHP" expanded="false" />
-                <element signature="e#15487#16198#0#PHP" expanded="false" />
-                <element signature="e#15670#15860#0#PHP" expanded="false" />
-                <element signature="e#15861#16058#0#PHP" expanded="false" />
-                <element signature="e#16059#16198#0#PHP" expanded="false" />
-                <element signature="e#16512#16597#0#PHP" expanded="false" />
-                <element signature="e#16765#17537#0#PHP" expanded="false" />
-                <element signature="e#16808#16888#0#PHP" expanded="false" />
-                <element signature="e#16901#16987#0#PHP" expanded="false" />
-                <element signature="e#16998#17210#0#PHP" expanded="false" />
-                <element signature="e#17211#17339#0#PHP" expanded="false" />
-                <element signature="e#17340#17537#0#PHP" expanded="false" />
-                <element signature="e#17587#18369#0#PHP" expanded="false" />
-                <element signature="e#17680#18359#0#PHP" expanded="false" />
-                <element signature="e#17855#18037#0#PHP" expanded="false" />
-                <element signature="e#18038#18227#0#PHP" expanded="false" />
-                <element signature="e#18228#18359#0#PHP" expanded="false" />
-                <element signature="n#makeSiteNameString#0;n#!!top" expanded="false" />
-                <element signature="e#18910#18987#0#PHP" expanded="false" />
-                <element signature="e#19087#19165#0#PHP" expanded="false" />
-                <element signature="n#timeStamp#0;n#!!top" expanded="false" />
-                <element signature="n#toCustomHeader#0;n#!!top" expanded="false" />
-                <element signature="e#19397#20341#0#PHP" expanded="false" />
-                <element signature="e#19430#19472#0#PHP" expanded="false" />
-                <element signature="e#19538#19595#0#PHP" expanded="false" />
-                <element signature="e#19604#19748#0#PHP" expanded="false" />
-                <element signature="e#19757#19836#0#PHP" expanded="false" />
-                <element signature="e#19845#19911#0#PHP" expanded="false" />
-                <element signature="e#19920#19998#0#PHP" expanded="false" />
-                <element signature="e#20007#20081#0#PHP" expanded="false" />
-                <element signature="e#20090#20148#0#PHP" expanded="false" />
-                <element signature="e#20157#20230#0#PHP" expanded="false" />
-                <element signature="e#20239#20290#0#PHP" expanded="false" />
-                <element signature="e#20299#20335#0#PHP" expanded="false" />
-                <element signature="n#toCustomDihedralHeader#0;n#!!top" expanded="false" />
-                <element signature="e#20392#21027#0#PHP" expanded="false" />
-                <element signature="e#20454#20522#0#PHP" expanded="false" />
-                <element signature="e#20523#20597#0#PHP" expanded="false" />
-                <element signature="e#20598#20675#0#PHP" expanded="false" />
-                <element signature="e#20676#20849#0#PHP" expanded="false" />
-                <element signature="e#20850#21027#0#PHP" expanded="false" />
-                <element signature="n#getBracketHeight#0;n#!!top" expanded="false" />
-                <element signature="e#21112#21205#0#PHP" expanded="false" />
-                <element signature="e#21157#21205#0#PHP" expanded="false" />
-                <element signature="n#getBracketWidth#0;n#!!top" expanded="false" />
-                <element signature="e#21269#21514#0#PHP" expanded="false" />
-                <element signature="e#21315#21386#0#PHP" expanded="false" />
-                <element signature="e#21387#21457#0#PHP" expanded="false" />
-                <element signature="e#21458#21514#0#PHP" expanded="false" />
-                <element signature="n#getModelType#0;n#!!top" expanded="false" />
-                <element signature="n#getMolecule#0;n#!!top" expanded="false" />
-                <element signature="e#23941#24481#0#PHP" expanded="false" />
-                <element signature="e#24023#24481#0#PHP" expanded="false" />
-                <element signature="n#splitMolSiteWise#0;n#!!top" expanded="false" />
-                <element signature="n#splitPmatrixSiteWise#0;n#!!top" expanded="false" />
-                <element signature="n#removeQuad#0;n#!!top" expanded="false" />
-                <element signature="n#removeDipole#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detmatrix.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/include/detmatrix.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -309,6 +164,7 @@
     <option name="width" value="1288" />
     <option name="height" value="685" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -324,24 +180,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="molecularDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="molecularDB" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="molecularDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="molecularDB" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="funcation" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="molecularDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="molecularDB" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="include" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -359,21 +205,21 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\molecularDB\img" />
+      <recent name="C:\xampp\htdocs\moleculeDB" />
+      <recent name="C:\xampp\htdocs\moleculeDB\js" />
+      <recent name="C:\xampp\htdocs\moleculeDB\funcation" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\molecularDB" />
       <recent name="C:\xampp\htdocs\molecularDB\class" />
       <recent name="C:\xampp\htdocs\molecularDB\" />
       <recent name="C:\xampp\htdocs\molecularDB\c" />
       <recent name="C:\xampp\htdocs\molecularDB\js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\molecularDB\img" />
-      <recent name="C:\xampp\htdocs\moleculeDB" />
-      <recent name="C:\xampp\htdocs\moleculeDB\js" />
-      <recent name="C:\xampp\htdocs\moleculeDB\funcation" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -388,9 +234,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Web Page.molec">
+  <component name="RunManager">
     <configuration name="othFunc.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://thermovm.mv.uni-kl.de/moleculeDB/funcation/othFunc.php" />
-    <configuration name="molec" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="localhost" start_url="/moleculardb/" />
     <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
       <PhpTestRunnerSettings />
       <method />
@@ -457,10 +302,6 @@
       <arguments />
       <envs />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.othFunc.php" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Web Page.molec" />
-    </list>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.othFunc.php" />
@@ -577,11 +418,15 @@
       <workItem from="1518682383711" duration="599000" />
       <workItem from="1518960309213" duration="6412000" />
       <workItem from="1519474105754" duration="1908000" />
+      <workItem from="1519740091578" duration="10988000" />
+      <workItem from="1519752494039" duration="829000" />
+      <workItem from="1519842937023" duration="599000" />
+      <workItem from="1520086581727" duration="109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311717000" />
+    <option name="totallyTimeSpent" value="324242000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -595,19 +440,18 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49092284" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49019608" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.48487142" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49394855" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28214827" sideWeight="0.7463175" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30030257" sideWeight="0.7463175" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49092284" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25816995" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32843137" sideWeight="0.48487142" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20499243" sideWeight="0.2536825" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49394855" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5067568" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20499243" sideWeight="0.2536825" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -615,6 +459,7 @@
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28805238" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -626,6 +471,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -700,21 +550,6 @@
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/funcation/fileFunc.php</url>
-          <line>598</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/funcation/fileFunc.php</url>
-          <line>638</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/funcation/fileFunc.php</url>
-          <line>627</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/funcation/othFunc.php</url>
           <line>317</line>
           <option name="timeStamp" value="48" />
@@ -728,18 +563,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="50" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/include/norm3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="107" column="12" lean-forward="false" selection-start-line="106" selection-start-column="69" selection-end-line="107" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/norm2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-26">
@@ -978,9 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="113" column="22" lean-forward="false" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
-          <folding>
-            <marker date="1512728238686" expanded="true" signature="2825:2865" ph="SELECT ${$co... ${$table}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1005,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/testlammps.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/generateFile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1019,50 +837,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funcation/fileFunc.php">
+    <entry file="file://$PROJECT_DIR$/include/detmatrix.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="523" column="23" lean-forward="false" selection-start-line="523" selection-start-column="23" selection-end-line="523" selection-end-column="23" />
-          <folding>
-            <element signature="n#getExt#0;n#!!top" expanded="false" />
-            <element signature="n#validateSize#0;n#!!top" expanded="false" />
-            <element signature="n#clearDirectory#0;n#!!top" expanded="false" />
-            <element signature="n#parsePMFile#0;n#!!top" expanded="false" />
-            <element signature="n#parsePMArray#0;n#!!top" expanded="false" />
-            <element signature="n#uploadFile#0;n#!!top" expanded="false" />
-            <element signature="n#processMolDetail#0;n#!!top" expanded="false" />
-            <element signature="n#printPMData#0;n#!!top" expanded="false" />
-            <element signature="e#7874#10294#0#PHP" expanded="false" />
-            <element signature="n#genPMFile#0;n#!!top" expanded="false" />
-            <element signature="n#genLsFile#0;n#!!top" expanded="false" />
-            <element signature="e#15292#15517#0#PHP" expanded="false" />
-            <element signature="e#15549#16315#0#PHP" expanded="false" />
-            <element signature="n#printLAMmolData#0;n#!!top" expanded="false" />
-            <element signature="n#genLAMintFile#0;n#!!top" expanded="false" />
-            <element signature="n#printLAMintData#0;n#!!top" expanded="false" />
-            <element signature="n#genGROffitpFile#0;n#!!top" expanded="false" />
-            <element signature="n#genGROatpFile#0;n#!!top" expanded="false" />
-            <element signature="n#genGROpdbFile#0;n#!!top" expanded="false" />
-            <element signature="n#printGROpdbData#0;n#!!top" expanded="false" />
-            <marker date="1518966466515" expanded="true" signature="3453:3494" ph="DELETE FROM pm_detail... " />
-            <marker date="1518966466515" expanded="true" signature="4315:4393" ph="INSERT INTO pm_detail... " />
-            <marker date="1518966466515" expanded="true" signature="5445:5535" ph="INSERT INTO pm_flexible... " />
-            <marker date="1518966466515" expanded="true" signature="5838:5928" ph="INSERT INTO pm_flexible... " />
-            <marker date="1518966466515" expanded="true" signature="6394:6438" ph="select type pm_master" />
-            <marker date="1518966466515" expanded="true" signature="6550:6674" ph="SELECT COUNT... site_type" />
-            <marker date="1518966466515" expanded="true" signature="6606:6671" ph="SELECT DISTI... pm_detail" />
-            <marker date="1518966466515" expanded="true" signature="6808:6949" ph="SELECT COUNT... site_type" />
-            <marker date="1518966466515" expanded="true" signature="6853:6926" ph="SELECT DISTI... pm_detail" />
-            <marker date="1518966466515" expanded="true" signature="7146:7188" ph="SELECT * FRO... pm_detail" />
-            <marker date="1518966466515" expanded="true" signature="7939:7983" ph="SELECT * FRO... pm_flexible" />
-            <marker date="1518966466515" expanded="true" signature="10846:10888" ph="SELECT * FRO... pm_detail" />
-          </folding>
+        <state relative-caret-position="227">
+          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/funcation/othFunc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
+        <state relative-caret-position="17">
           <caret line="317" column="23" lean-forward="false" selection-start-line="317" selection-start-column="19" selection-end-line="317" selection-end-column="23" />
           <folding>
             <element signature="n#toSubstanceTitle#0;n#!!top" expanded="false" />
@@ -1192,11 +977,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/detmatrix.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_9.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        <state relative-caret-position="142">
+          <caret line="254" column="9" lean-forward="false" selection-start-line="254" selection-start-column="9" selection-end-line="254" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/testlammps.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funcation/fileFunc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="689" column="67" lean-forward="false" selection-start-line="689" selection-start-column="67" selection-end-line="689" selection-end-column="67" />
+          <folding>
+            <element signature="n#getExt#0;n#!!top" expanded="false" />
+            <element signature="n#validateSize#0;n#!!top" expanded="false" />
+            <element signature="n#clearDirectory#0;n#!!top" expanded="false" />
+            <element signature="n#parsePMFile#0;n#!!top" expanded="false" />
+            <element signature="n#parsePMArray#0;n#!!top" expanded="false" />
+            <element signature="n#uploadFile#0;n#!!top" expanded="false" />
+            <element signature="n#processMolDetail#0;n#!!top" expanded="false" />
+            <element signature="n#printPMData#0;n#!!top" expanded="false" />
+            <element signature="e#7874#10294#0#PHP" expanded="false" />
+            <element signature="n#genPMFile#0;n#!!top" expanded="false" />
+            <element signature="n#genLsFile#0;n#!!top" expanded="false" />
+            <element signature="e#15312#15537#0#PHP" expanded="false" />
+            <element signature="e#15569#16335#0#PHP" expanded="false" />
+            <element signature="n#printLAMmolData#0;n#!!top" expanded="false" />
+            <element signature="n#genLAMintFile#0;n#!!top" expanded="false" />
+            <element signature="e#22773#22946#0#PHP" expanded="false" />
+            <element signature="n#genGROffitpFile#0;n#!!top" expanded="false" />
+            <element signature="n#printGROmolitpData#0;n#!!top" expanded="false" />
+            <element signature="n#genGROatpFile#0;n#!!top" expanded="false" />
+            <element signature="n#genGROpdbFile#0;n#!!top" expanded="false" />
+            <element signature="n#printGROpdbData#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
