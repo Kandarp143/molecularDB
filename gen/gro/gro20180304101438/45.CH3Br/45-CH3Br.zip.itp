@@ -1,0 +1,75 @@
+; rigid model: use the option "all-angles" *.mdp file 
+[ atomtypes ]
+; name    bond_type    mass         charge       ptype    sigma (nm)       epsilon (kJ/mol)
+  A1       A1          47.470      000000       A        0.3456         1.7777
+  A2       A2          47.470      000000       A        0.3456         1.7777
+  A3       A3          000000      -2.2335244378852       A        000000         000000
+  A4       A4          000000      -2.2335244378852       A        000000         000000
+
+
+
+[ angletypes ]
+;     i        j       k       func   th0         cth
+      A1       A2      A3      1      -180      1000.000    
+<br />
+<font size='1'><table class='xdebug-error xe-notice' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Notice: Undefined offset: 2 in C:\xampp\htdocs\molecularDB\funcation\fileFunc.php on line <i>817</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.4019</td><td bgcolor='#eeeeec' align='right'>373912</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='C:\xampp\htdocs\molecularDB\processDownAll.php' bgcolor='#eeeeec'>...\processDownAll.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>2.9389</td><td bgcolor='#eeeeec' align='right'>900264</td><td bgcolor='#eeeeec'>genGROmolitpFile(  )</td><td title='C:\xampp\htdocs\molecularDB\processDownAll.php' bgcolor='#eeeeec'>...\processDownAll.php<b>:</b>78</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>2.9389</td><td bgcolor='#eeeeec' align='right'>916696</td><td bgcolor='#eeeeec'>printGROmolitpData(  )</td><td title='C:\xampp\htdocs\molecularDB\funcation\fileFunc.php' bgcolor='#eeeeec'>...\fileFunc.php<b>:</b>731</td></tr>
+</table></font>
+      A2       A3      A4      1            1000.000    
+
+
+
+[ moleculetype ]
+             3
+
+
+[ atoms ]
+;    nr   type   resnr   residue   atom   cgnr   charge       mass   
+     1    A1     1       MOD       A1     1      0     47.470    
+     2    A2     1       MOD       A2     1      0     47.470    
+     3    A3     1       MOD       A3     1      -2.2335244378852     000000    
+     4    A4     1       MOD       A4     1      -2.2335244378852     000000    
+
+
+
+[ constraints ]
+;     fixed   bond   length    
+;                       d (nm)    
+      1       2      1  0.26146    
+      2       3      1  0.12209    
+      3       4      1  0.01728    
+
+
+
+[ angles ]
+; use the option "all - angles" *.mdp file
+    1     2     3       1    
+    2     3     4       1    
+
+
+
+[ dihedral_restraints ]
+; ai aj ak al type label phi dphi kfac power
+<br />
+<font size='1'><table class='xdebug-error xe-notice' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Notice: Undefined offset: 1 in C:\xampp\htdocs\molecularDB\funcation\fileFunc.php on line <i>911</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.4019</td><td bgcolor='#eeeeec' align='right'>373912</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='C:\xampp\htdocs\molecularDB\processDownAll.php' bgcolor='#eeeeec'>...\processDownAll.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>2.9389</td><td bgcolor='#eeeeec' align='right'>900264</td><td bgcolor='#eeeeec'>genGROmolitpFile(  )</td><td title='C:\xampp\htdocs\molecularDB\processDownAll.php' bgcolor='#eeeeec'>...\processDownAll.php<b>:</b>78</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>2.9389</td><td bgcolor='#eeeeec' align='right'>916696</td><td bgcolor='#eeeeec'>printGROmolitpData(  )</td><td title='C:\xampp\htdocs\molecularDB\funcation\fileFunc.php' bgcolor='#eeeeec'>...\fileFunc.php<b>:</b>731</td></tr>
+</table></font>
+     1      2        3        4        1        1                0        1        2    
+
+
+
+[ exclusions ]
+ 1   2   3   4  
+ 4   1   2   3  
+ 3   4   1   2  
+ 2   3   4   1  

@@ -7,4 +7,5 @@ session_start();
 <!DOCTYPE html>
 <!-- Design by Kandarp -->
 <html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="icon" href="img/favicon.ico">
 

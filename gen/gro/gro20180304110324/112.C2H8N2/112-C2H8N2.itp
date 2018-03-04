@@ -1,0 +1,71 @@
+; rigid model: use the option "all-angles" *.mdp file 
+[ atomtypes ]
+; name    bond_type    mass         charge       ptype    sigma (nm)       epsilon (kJ/mol)
+  A1       A1          15.034      000000       A        0.3607         00.999
+  A2       A2          15.034      000000       A        0.3607         00.999
+  A3       A3          14.007      000000       A        0.3321         0.2902
+  A4       A4          16.023      -0.6882       A        0.3309         1.1736
+  A5       A5          000000      +0.3441       A        000000         000000
+  A6       A6          000000      +0.3441       A        000000         000000
+
+
+
+[ angletypes ]
+;     i        j       k       func   th0         cth
+      A1       A2      A3      1      35.4297      1000.000    
+      A2       A3      A4      1      -113.5846      1000.000    
+      A3       A4      A5      1      105.4152      1000.000    
+      A4       A5      A6      1      -36.9669      1000.000    
+
+
+
+[ moleculetype ]
+             5
+
+
+[ atoms ]
+;    nr   type   resnr   residue   atom   cgnr   charge       mass   
+     1    A1     1       MOD       A1     1      0     15.034    
+     2    A2     1       MOD       A2     1      0     15.034    
+     3    A3     1       MOD       A3     1      0     14.007    
+     4    A4     1       MOD       A4     1      -0.6882     16.023    
+     5    A5     1       MOD       A5     1      +0.3441     000000    
+     6    A6     1       MOD       A6     1      +0.3441     000000    
+
+
+
+[ constraints ]
+;     fixed   bond   length    
+;                       d (nm)    
+      1       2      1  0.2628    
+      2       3      1  0.15544    
+      3       4      1  0.17629    
+      4       5      1  0.10194    
+      5       6      1  0.16432    
+
+
+
+[ angles ]
+; use the option "all - angles" *.mdp file
+    1     2     3       1    
+    2     3     4       1    
+    3     4     5       1    
+    4     5     6       1    
+
+
+
+[ dihedral_restraints ]
+; ai aj ak al type label phi dphi kfac power
+     1      2        3        4        1        1        -53.5163        0        1        2    
+     2      3        4        5        1        1        -68.9508        0        1        2    
+     3      4        5        6        1        1        32.8923        0        1        2    
+
+
+
+[ exclusions ]
+ 1   2   3   4   5   6  
+ 6   1   2   3   4   5  
+ 5   6   1   2   3   4  
+ 4   5   6   1   2   3  
+ 3   4   5   6   1   2  
+ 2   3   4   5   6   1  

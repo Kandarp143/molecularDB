@@ -1,0 +1,57 @@
+; rigid model: use the option "all-angles" *.mdp file 
+[ atomtypes ]
+; name    bond_type    mass         charge       ptype    sigma (nm)       epsilon (kJ/mol)
+  A1       A1          15.035      +0.19525       A        0.3607         00.999
+  A2       A2          14.007      -0.88653       A        0.3315         1.1819
+  A3       A3          1.0080      +0.34564       A        000000         000000
+  A4       A4          1.0080      +0.34564       A        000000         000000
+
+
+
+[ angletypes ]
+;     i        j       k       func   th0         cth
+      A1       A2      A3      1      112      1000.000    
+      A2       A3      A4      1      -37.04      1000.000    
+
+
+
+[ moleculetype ]
+             3
+
+
+[ atoms ]
+;    nr   type   resnr   residue   atom   cgnr   charge       mass   
+     1    A1     1       MOD       A1     1      +0.19525     15.035    
+     2    A2     1       MOD       A2     1      -0.88653     14.007    
+     3    A3     1       MOD       A3     1      +0.34564     1.0080    
+     4    A4     1       MOD       A4     1      +0.34564     1.0080    
+
+
+
+[ constraints ]
+;     fixed   bond   length    
+;                       d (nm)    
+      1       2      1  0.17861    
+      2       3      1  0.10178    
+      3       4      1  0.16248    
+
+
+
+[ angles ]
+; use the option "all - angles" *.mdp file
+    1     2     3       1    
+    2     3     4       1    
+
+
+
+[ dihedral_restraints ]
+; ai aj ak al type label phi dphi kfac power
+     1      2        3        4        1        1        -30.5855        0        1        2    
+
+
+
+[ exclusions ]
+ 1   2   3   4  
+ 4   1   2   3  
+ 3   4   1   2  
+ 2   3   4   1  

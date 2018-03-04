@@ -38,12 +38,11 @@ require_once 'funcation/othFunc.php'; ?>
 </head>
 <body>
 
-
+<!-- start #page -->
 <div id="wrapper">
     <?php include('include/nav.php') ?>
     <?php
     include 'database.php';
-
     $pdo = Database::connect();
     if ($_SESSION['act'] == 'true') {
         $tbl_sql = "SELECT
@@ -84,7 +83,6 @@ FROM
 FROM
     pm_master where user_mode = 1 ORDER BY display_id ASC";
     }
-
     ?>
     <div id="page">
         <div style="width: 98%;margin: 0 auto;">
@@ -207,7 +205,7 @@ FROM
 </div>
 <!-- end #page -->
 
-
+<!-- start #footer -->
 <div id="footer">
     <?php include('include/footer.php') ?>
 </div>

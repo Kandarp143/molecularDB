@@ -4,13 +4,13 @@
 /*for saved data retrive*/
 var data = null;
 $(document).ready(function () {
-
     /* apply datatable to table */
     var table = $('#listmol').DataTable({
         stateSave: true,
         pagingType: "input",
         columnDefs: [
             {"type": "natural", targets: 0},
+            {"type": "natural", targets: 1},
             {"type": "natural", targets: 4},
             {"type": "natural", targets: 5},
             {"type": "natural", targets: 6},
@@ -40,7 +40,7 @@ $(document).ready(function () {
         });
     });
     /*to drop downs*/
-    table.columns([4, 5, 6, 7, 8]).every(function () {
+    table.columns([5, 6, 7, 8, 9]).every(function () {
         var column = this;
         var select = $('<select><option value=""></option></select>')
             .appendTo($(column.footer()).empty())
@@ -57,10 +57,12 @@ $(document).ready(function () {
         });
 
     });
+
     /* after dropdown ordered, need to redraw table for sorting first column */
     table
-        .order([[0, 'asc']])
+        .order([[1, 'asc']])
         .draw();
+
     /*Restore state in column filters*/
     var state = table.state.loaded();
     if (state) {

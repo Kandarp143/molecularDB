@@ -1,0 +1,37 @@
+; rigid model: use the option "all-angles" *.mdp file 
+[ atomtypes ]
+; name    bond_type    mass         charge       ptype    sigma (nm)       epsilon (kJ/mol)
+  A1       A1          35.453      000000       A        0.3389         1.4107
+  A2       A2          35.453      000000       A        0.3389         1.4107
+
+
+
+
+
+
+[ moleculetype ]
+164-Cl2             1
+
+
+[ atoms ]
+;    nr   type   resnr   residue   atom   cgnr   charge       mass   
+     1    A1     1       MOD       A1     1      0     35.453    
+     2    A2     1       MOD       A2     1      0     35.453    
+
+
+
+[ constraints ]
+;     fixed   bond   length    
+;                       d (nm)    
+      1       2      1  0.20056    
+
+
+
+[ angles ]
+; use the option "all - angles" *.mdp file
+
+
+
+[ exclusions ]
+ 1   2  
+ 2   1  

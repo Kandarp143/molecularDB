@@ -15,7 +15,7 @@
         <!-- end #content -->
         <div id="sidebar">
             <div id="sidebar-content">
-                <img src="img/logo_BZS.jpg" style="margin-top: 15%">
+                <img src="img/logo_BZS.jpg">
             </div>
         </div>
         <!-- end #sidebar -->
