@@ -97,7 +97,7 @@ if ($res === TRUE) {
 }
 
 //insert into db
-$db->insert('INSERT INTO pm_down VALUES (?,?,NOW())', array($_SERVER['REMOTE_ADDR'], $typ));
+$db->insert('INSERT INTO pm_down VALUES (?,?,?,NOW())', array($_SERVER['REMOTE_ADDR'], 0, $typ));
 
 //download prompt
 header("Content-Type: application/zip");

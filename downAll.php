@@ -39,7 +39,7 @@ $db = new Database();
                             </td>
                             <td>
                                 <?php
-                                $result = $db->selectRecords('SELECT COUNT(*) FROM pm_down WHERE type = ?', array('ms2'));
+                                $result = $db->selectRecords('SELECT COUNT(*) FROM pm_down WHERE type = ? AND mol_id=0', array('ms2'));
                                 if ($_SESSION['act'] == 'true')
                                     echo '<b>Total Downloads : ' . $result[0][0] . '</b>';
                                 ?>
@@ -58,7 +58,7 @@ $db = new Database();
                             </td>
                             <td>
                                 <?php
-                                $result = $db->selectRecords('SELECT COUNT(*) FROM pm_down WHERE type = ?', array('ls1'));
+                                $result = $db->selectRecords('SELECT COUNT(*) FROM pm_down WHERE type = ? AND mol_id=0', array('ls1'));
                                 if ($_SESSION['act'] == 'true')
                                     echo '<b>Total Downloads : ' . $result[0][0] . '</b>';
                                 ?>
@@ -77,7 +77,7 @@ $db = new Database();
                             </td>
                             <td>
                                 <?php
-                                $result = $db->selectRecords('SELECT COUNT(*) FROM pm_down WHERE type = ?', array('lam'));
+                                $result = $db->selectRecords('SELECT COUNT(*) FROM pm_down WHERE type = ? AND mol_id=0 ', array('lam'));
                                 if ($_SESSION['act'] == 'true')
                                     echo '<b>Total Downloads : ' . $result[0][0] . '</b>';
                                 ?>
@@ -96,22 +96,23 @@ $db = new Database();
                             </td>
                             <td>
                                 <?php
-                                $result = $db->selectRecords('SELECT COUNT(*) FROM pm_down WHERE type = ?', array('gro'));
+                                $result = $db->selectRecords('SELECT COUNT(*) FROM pm_down WHERE type = ? AND mol_id = 0', array('gro'));
                                 if ($_SESSION['act'] == 'true')
                                     echo '<b>Total Downloads : ' . $result[0][0] . '</b>';
                                 ?>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="4">
-                                <button onclick="myFunction()">Reload Downloads Count</button>
-
-                                <script>
-                                    function myFunction() {
-                                        location.reload();
-                                    }
-                                </script>
-                            </td>
+                            <?php if ($_SESSION['act'] == 'true') { ?>
+                                <td colspan="4">
+                                    <button onclick="myFunction()">Reload Downloads Count</button>
+                                    <script>
+                                        function myFunction() {
+                                            location.reload();
+                                        }
+                                    </script>
+                                </td>
+                            <?php } ?>
                         </tr>
                     </table>
                     </p>

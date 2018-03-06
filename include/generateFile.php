@@ -75,13 +75,16 @@ if ($typ === 'ms2') {
 }
 
 
+//insert into db
+$db = new Database();
+$db->insert('INSERT INTO pm_down VALUES (?,?,?,NOW())', array($_SERVER['REMOTE_ADDR'], $id, $typ));
+
 //popup_ attachment
 header("Content-disposition: attachment; filename= $fileName");
 header("Content-type: $type");
 header('Pragma: no-cache');
 header('Expires: 0');
 set_time_limit(0);
-
 if ($typ === 'lam' || $typ === 'gro') {
     //for ZIP file
     header("Location: $zipName");
