@@ -119,8 +119,9 @@ function processMolDetail($masterId, $pmData, $act, $db)
         /* delete previous records*/
         $db->delete('DELETE FROM pm_detail WHERE master_id = ?', array($masterId));
     }
-
+    $sitetype = null;
     $flexData = null;
+    $site = null;
     //check weather contains flex data
     $devider = array_search("NIdfTypes", array_keys($pmData));
     if ($devider) {
@@ -727,7 +728,6 @@ function genGROmolitpFile($masterId, $filePath, $fileName)
 {
     //generating file
     ob_start();
-
     printGROmolitpData($masterId, $fileName);
     $content = ob_get_contents();
     ob_end_clean();
@@ -743,40 +743,41 @@ function printGROmolitpData($masterId, $fileName)
     //get subdtance name from file name
 //    $substance = str_replace(".itp", "", $fileName);
     $substance = substr($fileName, 0, strpos($fileName, "."));
-    $substance = substr($substance, 0, strpos($substance, "_"));
+//    $substance = substr($substance, 0, strpos($substance, "_"));
 
     /* SECTION 1 */
     print "; rigid model: use the option \"all-angles\" *.mdp file \n";
     print "[ atomtypes ]\n";
     print "; " .
-        "name    " .
-        "bond_type    " .
+        "name         " .
+        "bond_type     " .
         "mass         " .
-        "charge       " .
-        "ptype    " .
-        "sigma (nm)       " .
+        "charge         " .
+        "ptype      " .
+        "sigma (nm)      " .
         "epsilon (kJ/mol)\n";
 
     for ($i = 1; $i <= $m; $i++) {
         print "  " .
-            "A" . $i . "       " .
-            "A" . $i . "          " .
-            str_pad($lamArray["MASS"][$i], 6, "0", STR_PAD_RIGHT) . "      " .
-            str_pad($lamArray["CHAR"][$i], 6, "0", STR_PAD_LEFT) . "       " .
-            "A        " .
-            str_pad($lamArray["SIG"][$i], 6, "0", STR_PAD_LEFT) . "         " .
-            str_pad($lamArray["EPS"][$i], 6, "0", STR_PAD_LEFT) . "\n";
+            "A" . $i . "           " .
+            "A" . $i . "            " .
+            toFixLength($lamArray["MASS"][$i], 7) . "      " .
+            toFixLength($lamArray["CHAR"][$i], 7) . "        " .
+            "A          " .
+            toFixLength($lamArray["SIG"][$i], 7) . "         " .
+            toFixLength($lamArray["EPS"][$i], 7) . "\n";
     }
 
     print "\n\n\n";
 
     /* SECTION 2 */
-//make points for create Zmatrix
-//declaring variables
+    //make points for create Zmatrix
+    $lamForZ = modifyArrForGro(genLAMmolFile($masterId, null, null));
+    //declaring variables
     $points = array();
     $point = null;
     $oth = null;
-    foreach ($lamArray["coords"] as $row) {
+    foreach ($lamForZ["coords"] as $row) {
         $point = new Vec();
         $point->setId($row["id"]);
         $point->setName($row["id"]);
@@ -790,12 +791,15 @@ function printGROmolitpData($masterId, $fileName)
     $returnArray = makeZmatrix($points, true);
     $zmatrix = $returnArray["zmatrix"];
     $dis = array();
-    $ang = array();;
-    $dih = array();;
+    $ang = array();
+    $dih = array();
     foreach ($zmatrix as $z) {
-        $z[4] != "-" ? $dis[sizeof($dis) + 1] = $z[4] : "";
-        $z[6] != "-" ? $ang[sizeof($ang) + 1] = $z[6] : "";
-        $z[8] != "-" ? $dih[sizeof($dih) + 1] = $z[8] : "";
+        $dis[sizeof($dis) + 1] = $z[4] === '-' ? 0 : $z[4];
+        $ang[sizeof($ang) + 1] = $z[6] === '-' ? 0 : $z[6];
+        $dih[sizeof($dih) + 1] = $z[8] === '-' ? 0 : $z[8];
+//        $dis[sizeof($dis) + 1] = $z[4];
+//        $ang[sizeof($ang) + 1] = $z[6];
+//        $dih[sizeof($dih) + 1] = $z[8];
     }
 
     if ($m >= 3) {
@@ -826,7 +830,7 @@ function printGROmolitpData($masterId, $fileName)
     print "[ moleculetype ]\n";
     print $substance .
         "             " .
-        ($m - 1);
+        ($m + 1);
 
     print "\n\n\n";
     /* SECTION 4 */
@@ -851,31 +855,31 @@ function printGROmolitpData($masterId, $fileName)
             "MOD       " .
             "A" . $i . "     " .
             "1      " .
-            $lamArray["CHAR"][$i] . "     " .
-            str_pad($lamArray["MASS"][$i], 6, "0", STR_PAD_RIGHT) . "    \n";
+            toFixLength($lamArray["CHAR"][$i], 7) . "     " .
+            toFixLength($lamArray["MASS"][$i], 7) . "    \n";
     }
 
     print "\n\n\n";
     /* SECTION 5 */
 
-    print "[ constraints ]\n";
-    print ";     " .
-        "fixed   " .
-        "bond   " .
-        "length    \n";
-
-    print ";      " .
-        "          " .
-        "       " .
-        "d (nm)    \n";
 
     if ($m > 1) {
+        print "[ constraints ]\n";
+        print ";     " .
+            "fixed   " .
+            "bond   " .
+            "length    \n";
+
+        print ";      " .
+            "          " .
+            "       " .
+            "d (nm)    \n";
         for ($i = 1; $i < $m; $i++) {
             print "      " .
                 $i . "       " .
                 ($i + 1) . "      " .
                 "1  " .
-                ($dis[$i] / 10) . "    \n";
+                toFixLength(($dis[$i] / 10), 7) . "    \n";
         }
 
 
@@ -895,26 +899,26 @@ function printGROmolitpData($masterId, $fileName)
 
     }
 
-    if ($m > 3) {
-        print "\n\n\n";
-        /* SECTION 7 */
-        print "[ dihedral_restraints ]\n";
-        print "; ai aj ak al type label phi dphi kfac power\n";
-        for ($i = 1; $i < $m - 2; $i++) {
-            print "     " .
-                $i . "      " .
-                ($i + 1) . "        " .
-                ($i + 2) . "        " .
-                ($i + 3) . "        " .
-                "1        " .
-                "1        " .
-                $dih[$i] . "        " .
-                "0        " .
-                "1        " .
-                "2    \n";
-        }
-
-    }
+//    if ($m > 3) {
+//        print "\n\n\n";
+//        /* SECTION 7 */
+//        print "[ dihedral_restraints ]\n";
+//        print "; ai aj ak al type label phi dphi kfac power\n";
+//        for ($i = 1; $i < $m - 2; $i++) {
+//            print "     " .
+//                $i . "      " .
+//                ($i + 1) . "        " .
+//                ($i + 2) . "        " .
+//                ($i + 3) . "        " .
+//                "1        " .
+//                "1        " .
+//                $dih[$i] . "        " .
+//                "0        " .
+//                "1        " .
+//                "2    \n";
+//        }
+//
+//    }
 
     print "\n\n\n";
 
@@ -986,10 +990,8 @@ function printGROpdbData($masterId)
     $lamArray = modifyArrForGro(genLAMmolFile($masterId, null, 'gro'));
     $m = sizeof($lamArray['coords']);
 
-    print "MODEL 1\n";
-    print "CRYST1 1.8 0.9 1.0 90.00 90.00 90.00\n";
 
-//req
+    //req
     $xMax = $lamArray['coords'][0]['x'];
     $xMin = $lamArray['coords'][0]['x'];
     $yMax = $lamArray['coords'][0]['y'];
@@ -999,25 +1001,33 @@ function printGROpdbData($masterId)
 
     foreach ($lamArray['coords'] as $c) {
         $xMax = max($xMax, $c['x']);
-        $xMin = max($xMin, $c['x']);
+        $xMin = min($xMin, $c['x']);
         $yMax = max($yMax, $c['y']);
-        $yMin = max($yMin, $c['y']);
+        $yMin = min($yMin, $c['y']);
         $zMax = max($zMax, $c['z']);
-        $zMin = max($zMin, $c['z']);
+        $zMin = min($zMin, $c['z']);
     }
 
+    print "MODEL 1\n";
+    print "CRYST1       " . toFixLength(($xMax - $xMin), 3)
+        . "     "
+        . toFixLength($yMax - $yMin, 3)
+        . "     "
+        . toFixLength($zMax - $zMin, 3)
+        . "  90.00 90.00 90.00"
+        . "\n";
+
+
     foreach ($lamArray['coords'] as $c) {
-
-
-        print "ATOM     " .
-            $c['id'] . "    " .
-            "A" . $c['id'] . "    " .
+        print   "" .
+            "ATOM     " .
+            $c['id'] . "   " .
+            "A" . $c['id'] . "  " .
             "MOD    " .
-            "1    " .
-            "0.000    " .
-            "0.000    " .
-            $c['x'] . "    " .
-            $c['y'] . "    " .
-            $c['z'] . "     \n";
+            "1   " .
+            toFixLength($c['x'], 5) . "   " .
+            toFixLength($c['y'], 5) . "   " .
+            toFixLength($c['z'], 5) . "   " .
+            "\n";
     }
 }

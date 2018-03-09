@@ -57,6 +57,7 @@ if ($typ === 'ms2') {
 
 
     /* generate actual files */
+
     genGROffitpFile($filePath, 'forcefield.itp');
     genGROmolitpFile($id, $filePath, $fileName . '.itp');
     genGROpdbFile($id, $filePath, $fileName . '.pdb');

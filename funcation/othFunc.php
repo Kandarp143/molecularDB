@@ -80,6 +80,11 @@ function toFormatSiteType($siteType)
     return $siteType;
 }
 
+function toFixLength($value, $len)
+{
+    return substr(number_format($value + 0.00000001, $len), 0, $len);
+}
+
 /*func to get formatted reference for given substance */
 function referenceMessage($masterId)
 {
@@ -946,8 +951,8 @@ function removeDipole($molecule)
             //oth
             $oth['Site'] = sizeof($molecule['ch']) + 1;
             $oth['SiteName'] = $d->getName() . '[e_1]';
-            $oth['Mass'] = $d->getOth()['Mass'] / 2;
             $oth['Charge'] = (-0.2082 * $d->getOth()['Dipole']) / (2 * $a);
+            $oth['Mass'] = $d->getOth()['Mass'] / 2;
             $oth['Shielding'] = 1;
             $c1->setOth($oth);
             array_push($molecule['ch'], $c1);
@@ -962,8 +967,8 @@ function removeDipole($molecule)
             //oth
             $oth['Site'] = sizeof($molecule['ch']) + 1;
             $oth['SiteName'] = $d->getName() . '[e_3]';
-            $oth['Mass'] = $d->getOth()['Mass'] / 3;
-            $oth['Charge'] = (-0.2082 * $d->getOth()['Dipole']) / (2 * $a);
+            $oth['Charge'] = (0.2082 * $d->getOth()['Dipole']) / (2 * $a);
+            $oth['Mass'] = $d->getOth()['Mass'] / 2;
             $oth['Shielding'] = 1;
             $c2->setOth($oth);
             array_push($molecule['ch'], $c2);
@@ -974,7 +979,6 @@ function removeDipole($molecule)
     $molecule['dp'] = array();
     return $molecule;
 }
-
 
 function modifyArrForGro($lamArray)
 {

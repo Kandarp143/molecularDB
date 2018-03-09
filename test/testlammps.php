@@ -6,15 +6,33 @@ require_once '../Vec.php';
 require_once '../archiveMake.php';
 
 
-//$masterId = 21;
-//$points = getMolecule($masterId);
-//$points = removeQuad(splitMolSiteWise($points));
-//
-//
-//$lam = genLAMmolFile($masterId, null, '' . '.molecule');
-//var_dump($points['dp']);
-//var_dump($lam);
+$masterId = 86;
 
-$db = new Database();
-$result = $db->selectRecords('select DISTINCT(master_id),filename,ms2,ls1,lam,gro from pm_master ORDER by master_id ASC', null);
-var_dump($result);
+$points = getMolecule($masterId);
+$lamArray = modifyArrForGro(genLAMmolFile($masterId, null, 'gro'));
+$m = sizeof($lamArray['coords']);
+
+var_dump($lamArray['coords']);
+
+//req
+$xMax = $lamArray['coords'][0]['x'];
+$xMin = $lamArray['coords'][0]['x'];
+$yMax = $lamArray['coords'][0]['y'];
+$yMin = $lamArray['coords'][0]['y'];
+$zMax = $lamArray['coords'][0]['z'];
+$zMin = $lamArray['coords'][0]['z'];
+
+foreach ($lamArray['coords'] as $c) {
+    $xMax = max($xMax, $c['x']);
+    $xMin = min($xMin, $c['x']);
+    $yMax = max($yMax, $c['y']);
+    $yMin = min($yMin, $c['y']);
+    $zMax = max($zMax, $c['z']);
+    $zMin = min($zMin, $c['z']);
+}
+var_dump($xMax);
+var_dump($xMin);
+var_dump($yMax);
+var_dump($yMin);
+var_dump($zMax);
+var_dump($zMin);
